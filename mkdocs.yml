@@ -10,6 +10,7 @@ theme:
 nav:
   - 首页: index.md          # 默认的首页
   - 素朴集合论: 素朴集合论.md   # 这里必须和你放进docs的文件名一模一样
+  - 交替时态逻辑: 交替时态逻辑.md
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
