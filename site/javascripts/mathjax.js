@@ -3,7 +3,7 @@ window.MathJax = {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true // 关键：启用对 align 等复杂环境的支持
   },
   options: {
     ignoreHtmlClass: ".*|",
@@ -11,7 +11,5 @@ window.MathJax = {
   }
 };
 document$.subscribe(() => {
-  if (window.MathJax && MathJax.typesetPromise) {
-    MathJax.typesetPromise();
-  }
-});
+  MathJax.typesetPromise()
+})

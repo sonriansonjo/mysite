@@ -12,9 +12,18 @@ nav:
   - 素朴集合论: 素朴集合论.md   # 这里必须和你放进docs的文件名一模一样
   - 交替时态逻辑: 交替时态逻辑.md
 markdown_extensions:
+  - def_list                      # 定义列表语法
+  - toc:
+      permalink: true             # 标题后生成永久链接符号
+      toc_depth: 3                # 目录深度
+  - pymdownx.caret                # ^^插入^^
+  - pymdownx.mark                 # ==高亮==
+  - pymdownx.smartsymbols         # 智能符号（-> 变成 →）
+  - pymdownx.tasklist:                
+      custom_checkbox: true       #任务列表
   - pymdownx.arithmatex:
       generic: true
-      block_tag: 'pre'  # 解决与 Material 主题的样式冲突
+  - markdown_checklist.extension
 extra_javascript:
-  - javascripts/mathjax.js
+  #- javascripts/mathjax.js 
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
