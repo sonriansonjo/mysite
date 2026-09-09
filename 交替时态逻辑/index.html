@@ -407,19 +407,19 @@ $$
 \varphi \Coloneqq  p \mid \neg\varphi \mid \varphi_1 \lor \varphi_2 \mid \langle!\langle A\rangle!\rangle!\bigcirc\varphi \mid \langle!\langle A\rangle!\rangle \Box \varphi \mid \langle!\langle A\rangle!\rangle \varphi_1 \mathcal{U} \varphi_2 \
 $$
 其中<span class="arithmatex">\(p\in\Pi\)</span>，<span class="arithmatex">\(A\subseteq\Sigma\)</span>。<span class="arithmatex">\(\langle\!\langle \cdot\rangle\!\rangle\)</span>是联盟路径量词， <span class="arithmatex">\(\Box\text{、}\bigcirc\)</span>和<span class="arithmatex">\(\mathcal{U}\)</span>是时态算子，<span class="arithmatex">\(\neg\)</span>和<span class="arithmatex">\(\lor\)</span>是布尔算子。</p>
-<p>布尔算子<span class="arithmatex">\(\land\)</span>、<span class="arithmatex">\(\to\)</span>和<span class="arithmatex">\(\leftrightarrow\)</span>，零元逻辑联结词（逻辑常量）<span class="arithmatex">\(\top\)</span>和<span class="arithmatex">\(\bot\)</span>，以及涉及时态算子<span class="arithmatex">\(\Diamond\)</span>的联盟公式可定义如下：
+<p>布尔算子<span class="arithmatex">\(\land\)</span>、<span class="arithmatex">\(\to\)</span>和<span class="arithmatex">\(\leftrightarrow\)</span>，零元联结词（逻辑常量）<span class="arithmatex">\(\top\)</span>和<span class="arithmatex">\(\bot\)</span>，以及涉及时态算子<span class="arithmatex">\(\Diamond\)</span>的联盟公式可定义如下：
 $$
 \begin{align<em>}
 \varphi_1\land\varphi_2\equiv&amp;\neg(\neg\varphi_1\lor\neg\varphi_2)\\varphi_1\to\varphi_2\equiv&amp; \neg\varphi_1\lor\varphi_2\\varphi_1\leftrightarrow\varphi_2\equiv&amp; (\varphi_1\to\varphi_2)\land(\varphi_2\to\varphi_1)\\top\equiv&amp;\varphi\lor\neg\varphi\\bot\equiv&amp;\neg\top\\langle!\langle A\rangle!\rangle\Diamond\varphi\equiv&amp;\langle!\langle A\rangle!\rangle\top\mathcal{U}\varphi\
 \end{align</em>}
 $$</p>
 <p><strong>定义1.3（ATL语义）</strong> &ensp;ATL的语义定义在CGS <span class="arithmatex">\(\mathcal{S}\)</span>上，<span class="arithmatex">\(\mathcal{S},q\models\varphi\)</span>表明结构<span class="arithmatex">\(\mathcal{S}\)</span>上的状态<span class="arithmatex">\(q\)</span>满足状态公式<span class="arithmatex">\(\varphi\)</span>，令函数<span class="arithmatex">\([n]=\{0,1,\ldots,n-1\}\)</span>（<span class="arithmatex">\(n\in\mathbb{N}\)</span>），满足关系<span class="arithmatex">\(\models\)</span>定义如下：</p>
-<p>- <span class="arithmatex">\(\mathcal{S},q\models p\)</span>当且仅当<span class="arithmatex">\(p\in\pi(q)\)</span>；</p>
-<p>- <span class="arithmatex">\(\mathcal{S},q\models\neg\varphi\)</span>当且仅当<span class="arithmatex">\(\mathcal{S},q\not\models\varphi\)</span>；</p>
-<p>- <span class="arithmatex">\(\mathcal{S},q\models\varphi_1\lor\varphi_2\)</span>当且仅当<span class="arithmatex">\(\mathcal{S},q\models\varphi_1\)</span>或者<span class="arithmatex">\(\mathcal{S},q\models\varphi_2\)</span>；</p>
-<p>- <span class="arithmatex">\(\mathcal{S},q \models\langle\!\langle A\rangle\!\rangle\bigcirc\varphi\)</span>当且仅当存在<span class="arithmatex">\(F_A\)</span>，使得对于所有的<span class="arithmatex">\(F_{\Sigma\setminus A}\)</span>，对于所有的<span class="arithmatex">\(\lambda\in out(q,F_A\cup F_{\Sigma\setminus A})\)</span>，<span class="arithmatex">\(\mathcal{S},\lambda[1]\models\varphi\)</span>；</p>
-<p>- <span class="arithmatex">\(\mathcal{S},q \models\langle\!\langle A\rangle\!\rangle\Box \varphi\)</span>当且仅当存在<span class="arithmatex">\(F_A\)</span>，使得对于所有的<span class="arithmatex">\(F_{\Sigma\setminus A}\)</span>，对于所有的<span class="arithmatex">\(\lambda\in out(q,F_A\cup F_{\Sigma\setminus A})\)</span>，对于所有的<span class="arithmatex">\(i\in\mathbb{N}\)</span>，<span class="arithmatex">\(\mathcal{S},\lambda[i]\models\varphi\)</span>；</p>
-<p>- <span class="arithmatex">\(\mathcal{S},q \models\langle\!\langle A\rangle\!\rangle\varphi_1\mathcal{U}\varphi_2\)</span>当且仅当存在<span class="arithmatex">\(F_A\)</span>，使得对于所有的<span class="arithmatex">\(F_{\Sigma\setminus A}\)</span>，对于所有的<span class="arithmatex">\(\lambda\in out(q,F_A\cup F_{\Sigma\setminus A})\)</span>，存在<span class="arithmatex">\(i\in \mathbb{N}\)</span>使得<span class="arithmatex">\(\mathcal{S},\lambda[i]\models\varphi_2\)</span>，并且对于所有的<span class="arithmatex">\(j\in[i]\)</span>，<span class="arithmatex">\(\mathcal{S},\lambda[j]\models\varphi_1\)</span>.</p>
+<p>- <span class="arithmatex">\(\mathcal{S},q\models p\)</span> 当且仅当 <span class="arithmatex">\(p\in\pi(q)\)</span>；</p>
+<p>- <span class="arithmatex">\(\mathcal{S},q\models\neg\varphi\)</span> 当且仅当 <span class="arithmatex">\(\mathcal{S},q\not\models\varphi\)</span>；</p>
+<p>- <span class="arithmatex">\(\mathcal{S},q\models\varphi_1\lor\varphi_2\)</span> 当且仅当 <span class="arithmatex">\(\mathcal{S},q\models\varphi_1\)</span>或者<span class="arithmatex">\(\mathcal{S},q\models\varphi_2\)</span>；</p>
+<p>- <span class="arithmatex">\(\mathcal{S},q \models\langle\!\langle A\rangle\!\rangle\bigcirc\varphi\)</span> 当且仅当 存在<span class="arithmatex">\(F_A\)</span>，使得对于所有的<span class="arithmatex">\(F_{\Sigma\setminus A}\)</span>，对于所有的<span class="arithmatex">\(\lambda\in out(q,F_A\cup F_{\Sigma\setminus A})\)</span>，<span class="arithmatex">\(\mathcal{S},\lambda[1]\models\varphi\)</span>；</p>
+<p>- <span class="arithmatex">\(\mathcal{S},q \models\langle\!\langle A\rangle\!\rangle\Box \varphi\)</span> 当且仅当 存在<span class="arithmatex">\(F_A\)</span>，使得对于所有的<span class="arithmatex">\(F_{\Sigma\setminus A}\)</span>，对于所有的<span class="arithmatex">\(\lambda\in out(q,F_A\cup F_{\Sigma\setminus A})\)</span>，对于所有的<span class="arithmatex">\(i\in\mathbb{N}\)</span>，<span class="arithmatex">\(\mathcal{S},\lambda[i]\models\varphi\)</span>；</p>
+<p>- <span class="arithmatex">\(\mathcal{S},q \models\langle\!\langle A\rangle\!\rangle\varphi_1\mathcal{U}\varphi_2\)</span> 当且仅当 存在<span class="arithmatex">\(F_A\)</span>，使得对于所有的<span class="arithmatex">\(F_{\Sigma\setminus A}\)</span>，对于所有的<span class="arithmatex">\(\lambda\in out(q,F_A\cup F_{\Sigma\setminus A})\)</span>，存在<span class="arithmatex">\(i\in \mathbb{N}\)</span>使得<span class="arithmatex">\(\mathcal{S},\lambda[i]\models\varphi_2\)</span>，并且对于所有的<span class="arithmatex">\(j\in[i]\)</span>，<span class="arithmatex">\(\mathcal{S},\lambda[j]\models\varphi_1\)</span>.</p>
 
 
 
@@ -473,6 +473,8 @@ $$</p>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
