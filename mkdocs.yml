@@ -1,4 +1,5 @@
 site_name: Sonri an Sonjo的现代逻辑手册
+site_url: https://sonriansonjo.github.io/mysite/
 theme:
   name: material
   language: zh
