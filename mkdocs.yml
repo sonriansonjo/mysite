@@ -1,0 +1,16 @@
+site_name: Sonri an Sonjo的现代逻辑手册
+theme:
+  name: material
+  language: zh
+  palette:
+    scheme: default
+    primary: teal
+    accent: deep orange
+nav:
+  - 首页: index.md          # 默认的首页
+  - 素朴集合论: 素朴集合论.md   # 这里必须和你放进docs的文件名一模一样
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
