@@ -23,7 +23,7 @@
     
     
       
-        <title>交替时态逻辑 - Sonri an Sonjo的现代逻辑手册</title>
+        <title>交替时态逻辑 - 额尼河的故事</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Sonri an Sonjo的现代逻辑手册" class="md-header__button md-logo" aria-label="Sonri an Sonjo的现代逻辑手册" data-md-component="logo">
+    <a href=".." title="额尼河的故事" class="md-header__button md-logo" aria-label="额尼河的故事" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Sonri an Sonjo的现代逻辑手册
+            额尼河的故事
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -186,13 +186,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Sonri an Sonjo的现代逻辑手册" class="md-nav__button md-logo" aria-label="Sonri an Sonjo的现代逻辑手册" data-md-component="logo">
+    <a href=".." title="额尼河的故事" class="md-nav__button md-logo" aria-label="额尼河的故事" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Sonri an Sonjo的现代逻辑手册
+    额尼河的故事
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -390,8 +390,16 @@
 
 
 
-<h1 id="_1">交替时态逻辑</h1>
-<h2 id="atl">交替时态逻辑（ATL）的模型、语法、语义</h2>
+<h1 id="_1">交替时态逻辑<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">交替时态逻辑</a><ul>
+<li><a href="#atl">交替时态逻辑（ATL）的模型、语法、语义</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="atl">交替时态逻辑（ATL）的模型、语法、语义<a class="headerlink" href="#atl" title="Permanent link">&para;</a></h2>
 <p><strong>定义1.1（并发博弈结构，CGS）</strong> &ensp;交替时态逻辑定义在带名称的并发博弈结构（Concurrent Game Structure，CGS）上，一个CGS是一个七元组<span class="arithmatex">\(\mathcal{S} = \langle \Sigma, \mathcal{Q}, \Pi,\pi, \mathcal{A}ct,d,\delta\rangle\)</span>:</p>
 <p>- <span class="arithmatex">\(\Sigma=\{a_1,a_2,\ldots,a_n\}\)</span>是有限非空的全体玩家集，用<span class="arithmatex">\(a_i\)</span>表示<span class="arithmatex">\(\Sigma\)</span>中的任意元素；</p>
 <p>- <span class="arithmatex">\(\mathcal{Q}\)</span>是非空的状态集，用<span class="arithmatex">\(q\)</span>表示<span class="arithmatex">\(\mathcal{Q}\)</span>中的任意元素；</p>
@@ -402,17 +410,17 @@
 <p>- <span class="arithmatex">\(\delta\)</span>是状态迁移函数，它将一个状态<span class="arithmatex">\(q\)</span>和在该状态下的一个行动向量<span class="arithmatex">\(\vec{\alpha}=\langle\alpha_{a_1},\alpha_{a_2},\ldots,\alpha_{a_n}\rangle\in D(q)\)</span>映射至状态<span class="arithmatex">\(\delta(q,\alpha_{a_1},\alpha_{a_2},\ldots,\alpha_{a_n})\)</span>上，表示状态<span class="arithmatex">\(q\)</span>下每位玩家<span class="arithmatex">\(a_i\)</span>分别采取行动<span class="arithmatex">\(\alpha_{a_i}\)</span>后，将迁移或抵达的状态；若<span class="arithmatex">\(\vec{\alpha}=\langle\alpha_{a_1},\alpha_{a_2},\ldots,\alpha_{a_n}\rangle\not\in D(q)\)</span>，则<span class="arithmatex">\(\delta(q,\alpha_{a_1},\alpha_{a_2},\ldots,\alpha_{a_n})\)</span>无定义；<span class="arithmatex">\(\delta(q,D(q))=\{\delta(q,\vec{\alpha})\mid\vec{\alpha}\in D(q)\}\)</span>表示状态<span class="arithmatex">\(q\)</span>的所有后继状态构成的集合；</p>
 <p><strong>策略和联盟策略</strong> &ensp;函数<span class="arithmatex">\(f_a\colon\mathcal{Q}\longrightarrow\mathcal{A}ct\)</span>是玩家<span class="arithmatex">\(a\)</span>的一个策略，其中该函数的所有取值<span class="arithmatex">\(f_a(q)\in d_a(q)\)</span>，该函数为玩家<span class="arithmatex">\(a\)</span>在所有状态下都指派了一个可行行动。对于联盟<span class="arithmatex">\(A\subseteq\Sigma\)</span>和玩家<span class="arithmatex">\(a\in A\)</span>，函数<span class="arithmatex">\(F_A:a\longmapsto f_a\)</span>表示联盟<span class="arithmatex">\(A\)</span>的策略，该函数为联盟<span class="arithmatex">\(A\)</span>中的每位玩家<span class="arithmatex">\(a\)</span>都指派了一个策略。</p>
 <p><strong>计算路径和输出函数</strong> &ensp;计算路径<span class="arithmatex">\(\lambda=q_0,q_1,q_2,\ldots\)</span>是一个状态变化序列，其中对于所有<span class="arithmatex">\(i\geq 0\)</span>，<span class="arithmatex">\(q_{i+1}\in\delta(q_i,D(q_i))\)</span>；约定<span class="arithmatex">\(\lambda[i]=q_i\)</span>，<span class="arithmatex">\(\lambda[i,j]=q_i,q_{i+1},\ldots,q_j\)</span>，<span class="arithmatex">\(\lambda[i,\infty]=q_i,q_{i+1},\ldots\)</span>。输出函数<span class="arithmatex">\(out(q,F_A)=\{\lambda=q_0,q_1,q_2,\ldots\mid q_0=q\)</span>并且<span class="arithmatex">\(q_{i+1}=\delta(q,\vec{\alpha}),\)</span>其中<span class="arithmatex">\(\vec{\alpha}=\langle\alpha_{a_1},\alpha_{a_2},\ldots,\alpha_{a_n}\rangle\in D(q)\)</span>并且对于所有的<span class="arithmatex">\(a_i\in A,\alpha_{a_i}=F_A(a_i)(q_i)\}\)</span>。这一输出函数的元素包括联盟<span class="arithmatex">\(A\)</span>遵循策略<span class="arithmatex">\(F_A\)</span>可保证的所有路径。</p>
-<p><strong>定义1.2（ATL语法）</strong> &ensp;给定一个原子命题集<span class="arithmatex">\(\Pi\)</span>和一个全体玩家集<span class="arithmatex">\(\Sigma\)</span>，<span class="arithmatex">\(\mathcal{L}_{ATL}\)</span>的语法定义如下：
-$$
-\varphi \Coloneqq  p \mid \neg\varphi \mid \varphi_1 \lor \varphi_2 \mid \langle!\langle A\rangle!\rangle!\bigcirc\varphi \mid \langle!\langle A\rangle!\rangle \Box \varphi \mid \langle!\langle A\rangle!\rangle \varphi_1 \mathcal{U} \varphi_2 \
-$$
-其中<span class="arithmatex">\(p\in\Pi\)</span>，<span class="arithmatex">\(A\subseteq\Sigma\)</span>。<span class="arithmatex">\(\langle\!\langle \cdot\rangle\!\rangle\)</span>是联盟路径量词， <span class="arithmatex">\(\Box\text{、}\bigcirc\)</span>和<span class="arithmatex">\(\mathcal{U}\)</span>是时态算子，<span class="arithmatex">\(\neg\)</span>和<span class="arithmatex">\(\lor\)</span>是布尔算子。</p>
-<p>布尔算子<span class="arithmatex">\(\land\)</span>、<span class="arithmatex">\(\to\)</span>和<span class="arithmatex">\(\leftrightarrow\)</span>，零元联结词（逻辑常量）<span class="arithmatex">\(\top\)</span>和<span class="arithmatex">\(\bot\)</span>，以及涉及时态算子<span class="arithmatex">\(\Diamond\)</span>的联盟公式可定义如下：
-$$
-\begin{align<em>}
-\varphi_1\land\varphi_2\equiv&amp;\neg(\neg\varphi_1\lor\neg\varphi_2)\\varphi_1\to\varphi_2\equiv&amp; \neg\varphi_1\lor\varphi_2\\varphi_1\leftrightarrow\varphi_2\equiv&amp; (\varphi_1\to\varphi_2)\land(\varphi_2\to\varphi_1)\\top\equiv&amp;\varphi\lor\neg\varphi\\bot\equiv&amp;\neg\top\\langle!\langle A\rangle!\rangle\Diamond\varphi\equiv&amp;\langle!\langle A\rangle!\rangle\top\mathcal{U}\varphi\
-\end{align</em>}
-$$</p>
+<p><strong>定义1.2（ATL语法）</strong> &ensp;给定一个原子命题集<span class="arithmatex">\(\Pi\)</span>和一个全体玩家集<span class="arithmatex">\(\Sigma\)</span>，<span class="arithmatex">\(\mathcal{L}_{ATL}\)</span>的语法定义如下：</p>
+<div class="arithmatex">\[
+\varphi ::=  p \mid \neg\varphi \mid \varphi_1 \lor \varphi_2 \mid \langle\!\langle A\rangle\!\rangle\bigcirc\varphi \mid \langle\!\langle A\rangle\!\rangle \Box \varphi \mid \langle\!\langle A\rangle\!\rangle \varphi_1 \mathcal{U} \varphi_2 \\
+\]</div>
+<p>其中<span class="arithmatex">\(p\in\Pi\)</span>，<span class="arithmatex">\(A\subseteq\Sigma\)</span>。<span class="arithmatex">\(\langle\!\langle \cdot\rangle\!\rangle\)</span>是联盟路径量词， <span class="arithmatex">\(\Box\text{、}\bigcirc\)</span>和<span class="arithmatex">\(\mathcal{U}\)</span>是时态算子，<span class="arithmatex">\(\neg\)</span>和<span class="arithmatex">\(\lor\)</span>是布尔算子。</p>
+<p>布尔算子<span class="arithmatex">\(\land\)</span>、<span class="arithmatex">\(\to\)</span>和<span class="arithmatex">\(\leftrightarrow\)</span>，零元联结词（逻辑常量）<span class="arithmatex">\(\top\)</span>和<span class="arithmatex">\(\bot\)</span>，以及涉及时态算子<span class="arithmatex">\(\Diamond\)</span>的联盟公式可定义如下：</p>
+<div class="arithmatex">\[
+\begin{align*}
+\varphi_1\land\varphi_2\equiv&amp;\neg(\neg\varphi_1\lor\neg\varphi_2)\\\varphi_1\to\varphi_2\equiv&amp; \neg\varphi_1\lor\varphi_2\\\varphi_1\leftrightarrow\varphi_2\equiv&amp; (\varphi_1\to\varphi_2)\land(\varphi_2\to\varphi_1)\\\top\equiv&amp;\varphi\lor\neg\varphi\\\bot\equiv&amp;\neg\top\\\langle\!\langle A\rangle\!\rangle\Diamond\varphi\equiv&amp;\langle\!\langle A\rangle\!\rangle\top\mathcal{U}\varphi\
+\end{align*}
+\]</div>
 <p><strong>定义1.3（ATL语义）</strong> &ensp;ATL的语义定义在CGS <span class="arithmatex">\(\mathcal{S}\)</span>上，<span class="arithmatex">\(\mathcal{S},q\models\varphi\)</span>表明结构<span class="arithmatex">\(\mathcal{S}\)</span>上的状态<span class="arithmatex">\(q\)</span>满足状态公式<span class="arithmatex">\(\varphi\)</span>，令函数<span class="arithmatex">\([n]=\{0,1,\ldots,n-1\}\)</span>（<span class="arithmatex">\(n\in\mathbb{N}\)</span>），满足关系<span class="arithmatex">\(\models\)</span>定义如下：</p>
 <p>- <span class="arithmatex">\(\mathcal{S},q\models p\)</span> 当且仅当 <span class="arithmatex">\(p\in\pi(q)\)</span>；</p>
 <p>- <span class="arithmatex">\(\mathcal{S},q\models\neg\varphi\)</span> 当且仅当 <span class="arithmatex">\(\mathcal{S},q\not\models\varphi\)</span>；</p>
@@ -473,8 +481,6 @@ $$</p>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
-      
-        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
