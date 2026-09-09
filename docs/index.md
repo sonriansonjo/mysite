@@ -21,8 +21,8 @@
 我正在学习现代逻辑，这里会适时整理并更新我的学习笔记，近期计划涵盖主题包括：
 
 - 素朴集合论（Naive Set Theory）
-- 命题逻辑（Proposition Logic）
-- 一阶逻辑（First Order Logic）
+- 命题逻辑（Propositional Logic）
+- 一阶逻辑（First-order Logic）
 - 命题模态逻辑（Modal Logic）
 - 交替时态逻辑（Alternating-time Temporal Logic）
 ---
