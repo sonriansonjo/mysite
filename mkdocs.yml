@@ -5,9 +5,24 @@ theme:
   language: zh
   favicon: assets/images/logic.svg
   palette:
-    scheme: default
-    primary: teal
-    accent: deep orange
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/toggle-switch 
+        name: 切换至黑夜模式
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至白昼模式
+  features:
+    - search.suggest
+    - search.highlight
   icon: 
     logo: material/notebook-edit
   features:
@@ -22,17 +37,21 @@ nav:
   - 首页: index.md          # 默认的首页
   - 预备知识: 
     - Prerequisites/index.md
-    - 素朴集合论: Prerequisites/naive_set_theory.md   
+    - 素朴集合论1: Prerequisites/naive_set_theory_1.md   
     - 数学方法: Prerequisites/mathematical_method.md
     - 形式语言与元逻辑基础: Prerequisites/basic_formal_language_and_metalogic.md
   - 交替时态逻辑: 
     - ATL/index.md
     - 语法和语义: ATL/syntax_and_semantics.md
+plugins:
+  - search
+  - offline
 markdown_extensions:
   - def_list                      # 定义列表语法
   - toc:
-      permalink: true             # 标题后生成永久链接符号
-      toc_depth: 3                # 目录深度
+      permalink: ⚓︎             # 标题后生成永久链接符号
+      toc_depth: 4                # 目录深度
+      title: 目录
   - pymdownx.caret                # ^^插入^^
   - pymdownx.mark                 # ==高亮==
   - pymdownx.smartsymbols         # 智能符号（-> 变成 →）
