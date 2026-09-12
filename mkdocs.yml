@@ -7,10 +7,27 @@ theme:
     scheme: default
     primary: teal
     accent: deep orange
+  icon: 
+    favicon: material/lambda
+    logo: material/notebook
+  features:
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
 nav:
   - 首页: index.md          # 默认的首页
-  - 素朴集合论: 素朴集合论.md   # 这里必须和你放进docs的文件名一模一样
-  - 交替时态逻辑: 交替时态逻辑.md
+  - 预备知识: 
+    - Prerequisites/index.md
+    - 素朴集合论: Prerequisites/naive_set_theory.md   
+    - 数学方法: Prerequisites/mathematical_method.md
+    - 形式语言与元逻辑基础: Prerequisites/basic_formal_language_and_metalogic.md
+  - 交替时态逻辑: 
+    - ATL/index.md
+    - 语法和语义: ATL/syntax_and_semantics.md
 markdown_extensions:
   - def_list                      # 定义列表语法
   - toc:
@@ -24,6 +41,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - markdown_checklist.extension
+  - footnotes
 extra_javascript:
-  #- javascripts/mathjax.js 
+  - javascripts/mathjax.js 
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

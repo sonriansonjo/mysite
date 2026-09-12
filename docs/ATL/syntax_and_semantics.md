@@ -1,8 +1,8 @@
-# 交替时态逻辑
+# 语法和语义
 
 [TOC]
 
-## 交替时态逻辑（ATL）的模型、语法、语义
+## 模型
 
 **定义1.1（并发博弈结构，CGS）** &ensp;交替时态逻辑定义在带名称的并发博弈结构（Concurrent Game Structure，CGS）上，一个CGS是一个七元组$\mathcal{S} = \langle \Sigma, \mathcal{Q}, \Pi,\pi, \mathcal{A}ct,d,\delta\rangle$:
 
@@ -24,6 +24,8 @@
 
 **计算路径和输出函数** &ensp;计算路径$\lambda=q_0,q_1,q_2,\ldots$是一个状态变化序列，其中对于所有$i\geq 0$，$q_{i+1}\in\delta(q_i,D(q_i))$；约定$\lambda[i]=q_i$，$\lambda[i,j]=q_i,q_{i+1},\ldots,q_j$，$\lambda[i,\infty]=q_i,q_{i+1},\ldots$。输出函数$out(q,F_A)=\{\lambda=q_0,q_1,q_2,\ldots\mid q_0=q$并且$q_{i+1}=\delta(q_i,\vec{\alpha}),$其中$\vec{\alpha}=\langle\alpha_{a_1},\alpha_{a_2},\ldots,\alpha_{a_n}\rangle\in D(q_i)$并且对于所有的$a_i\in A,\alpha_{a_i}=F_A(a_i)(q_i)\}$。这一输出函数的元素包括联盟$A$遵循策略$F_A$可保证的所有路径。
 
+## 语法
+
 **定义1.2（ATL语法）** &ensp;给定一个原子命题集$\Pi$和一个全体玩家集$\Sigma$，$\mathcal{L}_{ATL}$的语法定义如下：
 
 $$
@@ -39,6 +41,7 @@ $$
 \varphi_1\land\varphi_2\equiv&\neg(\neg\varphi_1\lor\neg\varphi_2)\\\varphi_1\to\varphi_2\equiv& \neg\varphi_1\lor\varphi_2\\\varphi_1\leftrightarrow\varphi_2\equiv& (\varphi_1\to\varphi_2)\land(\varphi_2\to\varphi_1)\\\top\equiv&\varphi\lor\neg\varphi\\\bot\equiv&\neg\top\\\langle\!\langle A\rangle\!\rangle\Diamond\varphi\equiv&\langle\!\langle A\rangle\!\rangle\top\mathcal{U}\varphi\
 \end{align*}
 $$
+## 语义
 
 **定义1.3（ATL语义）** &ensp;ATL的语义定义在CGS $\mathcal{S}$上，$\mathcal{S},q\models\varphi$表明结构$\mathcal{S}$上的状态$q$满足状态公式$\varphi$，令函数$[n]=\{0,1,\ldots,n-1\}$（$n\in\mathbb{N}$），满足关系$\models$定义如下：
 
