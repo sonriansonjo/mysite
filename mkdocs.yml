@@ -3,13 +3,13 @@ site_url: https://sonriansonjo.github.io/mysite/
 theme:
   name: material
   language: zh
+  favicon: assets/images/logic.svg
   palette:
     scheme: default
     primary: teal
     accent: deep orange
   icon: 
-    favicon: material/lambda
-    logo: material/notebook
+    logo: material/notebook-edit
   features:
     - navigation.footer
     - navigation.instant

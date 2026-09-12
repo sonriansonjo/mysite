@@ -10,8 +10,10 @@ window.MathJax = {
     processHtmlClass: "arithmatex"
   }
 };
-document$.subscribe(() => {
-  if (window.MathJax && MathJax.typesetPromise) {
-    MathJax.typesetPromise();
-  }
-});
+
+document$.subscribe(() => { 
+  MathJax.startup.output.clearCache()
+  MathJax.typesetClear()
+  MathJax.texReset()
+  MathJax.typesetPromise()
+})
