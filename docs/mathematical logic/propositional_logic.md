@@ -21,12 +21,11 @@
     - 除由上述规则形成的公式，没有其他公式。
 
 2. （巴科斯-诺尔范式）给定原子命题集$\Phi=\{p_n\mid n\in \mathbb{N}\}$，命题逻辑形式语言 $\mathcal{L}_0$ 定义如下：
-
-$$
+    $$
 \mathcal{L}_0\ni\varphi::= p\mid\neg \varphi\mid(\varphi_1\land\varphi_2)\mid(\varphi_1\lor\varphi_2)\mid(\varphi_1\to\varphi_2)\mid(\varphi_1\leftrightarrow\varphi_2)
-$$
+  $$
 
-其中$p\in\Phi$。
+     其中$p\in\Phi$。
 
 3. （归纳闭包）给定初始符号集 $\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}$ ，$\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}$ 是 $\Sigma$ 中符号形成的所有有穷字符串构成的集合，$\Sigma^{*}$上的公式构造函数集 $F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}$ 定义如下：
 
@@ -34,14 +33,9 @@ $$
     - $c_{\land}(\varphi_1,\varphi_2):=(\varphi_1\land\varphi_2)$；
     - $c_{\lor}(\varphi_1,\varphi_2):=(\varphi_1\lor\varphi_2)$；
     - $c_{\to}(\varphi_1,\varphi_2):=(\varphi_1\to\varphi_2)$；
-    - $c_{\leftrightarrow}(\varphi_1,\varphi_2):=(\varphi_1\leftrightarrow\varphi_2)$.
+    - $c_{\leftrightarrow}(\varphi_1,\varphi_2):=(\varphi_1\leftrightarrow\varphi_2)$. 公式集 $\Sigma_n$ 定义如下： &emsp;$\Sigma_0:=\Phi$；&emsp;$\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)$.
 
-公式集 $\Sigma_n$ 定义如下：
-
-  &emsp;$\Sigma_0:=\Phi$；
-  &emsp;$\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)$.
-
-命题逻辑形式语言 $\mathcal{L}_0:=F^{+}(\Phi)=\bigcup_{n\in \mathbb{N}}\Sigma_n$，即 $\mathcal{L}_0$ 是在公式构造函数集 $F$ 下的归纳闭包，是满足前述形成规则的最小集合。
+    命题逻辑形式语言 $\mathcal{L}_0:=F^{+}(\Phi)=\bigcup_{n\in \mathbb{N}}\Sigma_n$，即 $\mathcal{L}_0$ 是在公式构造函数集 $F$ 下的归纳闭包，是满足前述形成规则的最小集合。
 
 4. （公式构造序列）公式构造序列$\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n\rangle \in (\Sigma^{*})^{*}$ 是字符串集$\Sigma^{*}$ 上的有限序列（即对任意的$i\in\{1,2,..,n\}$，$\varepsilon_i\in\Sigma^{*}$），其中对于任意$i\in\{1,2,...,n\}$， $\varepsilon_i$ 满足以下情形之一：
 
@@ -52,7 +46,7 @@ $$
     - 要么存在 $j,k\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\to}(\varepsilon_j,\varepsilon_k)$ ；
     - 要么存在 $j,k\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\leftrightarrow}(\varepsilon_j,\varepsilon_k)$ .
 
-字符串 $\varepsilon\in\Sigma^{*}$ 是公式，当且仅当存在公式构造序列$\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle$.
+    字符串 $\varepsilon\in\Sigma^{*}$ 是公式，当且仅当存在公式构造序列$\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle$.
 
 **定理1.3（结构归纳法）** 对任意公式 $\varphi\in\mathcal{L}_0$，$\varphi$ 具有性质 $P$ 当且仅当：
 
