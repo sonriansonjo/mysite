@@ -2,30 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sonriansonjo.github.io/mysite/index.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
          <loc>https://sonriansonjo.github.io/mysite/ATL/index.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
          <loc>https://sonriansonjo.github.io/mysite/ATL/syntax_and_semantics.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
          <loc>https://sonriansonjo.github.io/mysite/Prerequisites/index.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
          <loc>https://sonriansonjo.github.io/mysite/Prerequisites/basic_formal_language_and_metalogic.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
          <loc>https://sonriansonjo.github.io/mysite/Prerequisites/mathematical_method.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
          <loc>https://sonriansonjo.github.io/mysite/Prerequisites/naive_set_theory_1.html</loc>
-         <lastmod>2026-09-12</lastmod>
+         <lastmod>2026-09-15</lastmod>
+    </url>
+    <url>
+         <loc>https://sonriansonjo.github.io/mysite/mathematical%20logic/index.html</loc>
+         <lastmod>2026-09-15</lastmod>
+    </url>
+    <url>
+         <loc>https://sonriansonjo.github.io/mysite/mathematical%20logic/propositional_logic.html</loc>
+         <lastmod>2026-09-15</lastmod>
     </url>
 </urlset>
