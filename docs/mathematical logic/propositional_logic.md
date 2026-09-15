@@ -2,15 +2,15 @@
 
 ## 形式语言
 
-**定义1.1（初始符号集）** 命题逻辑初始符号集 $\Sigma=\Phi\cup\{\neg,\lor,\land,\to,\leftrightarrow,),(\}$ .其中：
+**定义1.1（初始符号集）** 命题逻辑初始符号集 $\Sigma=\Phi\cup\{\neg,\land,\lor,\to,\leftrightarrow,),(\}$ .其中：
 
 - $\Phi=\{p_n\mid n\in \mathbb{N}\}$ 是可数无穷的原子命题集，其元素称为原子命题；
-- $\lnot,\lor,\land,\to,\leftrightarrow$ 被称为逻辑联结词；
+- $\neg,\land,\lor,\to,\leftrightarrow$ 被称为逻辑联结词，其中 $\neg$ 是一元联结词，$\land,\lor,\to,\leftrightarrow$ 是二元联结词；
 - $),($ 是标点符号。
 
 **定义1.2（形式语言）** 
 
-**1. （生成规则）** 命题逻辑形式语言 $\mathcal{L}_0$ 的公式由初始符号集 $\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}$ 和以下生成规则构成：
+**1. （生成规则）** 命题逻辑形式语言 $\mathcal{L}_0$ 的公式由初始符号集 $\Sigma=\Phi\cup\{\lnot,\land,\lor,\to,\leftrightarrow,),(\}$ 和以下生成规则构成：
 
    - 若 $p\in\Phi$ ，则 $p$ 是公式；
    - 若 $\varphi$ 是公式，则 $\neg\varphi$ 是公式；
@@ -28,7 +28,7 @@ $$
    
    其中$p\in\Phi$。
 
-**3. （归纳闭包）** 给定初始符号集 $\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}$ ，$\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}$ 是 $\Sigma$ 中符号形成的所有有穷字符串构成的集合，$\Sigma^{*}$上的公式构造函数集 $F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}$ 定义如下：
+**3. （归纳闭包）** 给定初始符号集 $\Sigma=\Phi\cup\{\lnot,\land,\lor,\to,\leftrightarrow,),(\}$ ，$\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}$ 是 $\Sigma$ 中符号形成的所有有穷字符串构成的集合，$\Sigma^{*}$上的公式构造函数集 $F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}$ 定义如下：
 
    - $c_{\neg}(\varphi):=\neg\varphi$；
    - $c_{\land}(\varphi_1,\varphi_2):=(\varphi_1\land\varphi_2)$；
@@ -52,7 +52,7 @@ $$
    - 要么存在 $j,k\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\to}(\varepsilon_j,\varepsilon_k)$ ；
    - 要么存在 $j,k\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\leftrightarrow}(\varepsilon_j,\varepsilon_k)$ .
 
-   字符串 $\varepsilon\in\Sigma^{*}$ 是公式，当且仅当存在公式构造序列$\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle$.
+   字符串 $\varepsilon\in\Sigma^{*}$ 是公式，当且仅当存在公式构造序列 $\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle$.
 
 **定理1.3（结构归纳法）** 对任意公式 $\varphi\in\mathcal{L}_0$，$\varphi$ 具有性质 $P$ 当且仅当：
 
@@ -80,9 +80,9 @@ $$
      - $\land,\lor$ 左结合；
      - $\to$ 右结合。
 
-**定义1.6（原子命题出现集合）** 对任意公式 $\varphi$，其出现的原子命题集合 $\mathrm{Var}(\varphi)$，递归定义如下：
+**定义1.6（原子命题出现）** 对任意公式 $\varphi$，其出现的原子命题集 $\mathrm{Var}(\varphi)$ 递归定义如下：
 
-   * $\mathrm{Var}(p)={p}$；
+   * $\mathrm{Var}(p)=\{p\}$；
    * $\mathrm{Var}(\neg\varphi)=\mathrm{Var}(\varphi)$；
    * $\mathrm{Var}((\varphi\land\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)$；
    * $\mathrm{Var}((\varphi\lor\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)$；
@@ -104,6 +104,19 @@ $$
   
   若 $\psi\in\mathrm{Sub}(\varphi)$ 且 $\psi\ne\varphi$，则称 $\psi$ 为 $\varphi$ 的真子公式。记为$\mathrm{Sub}^-(\varphi)=\mathrm{Sub}(\varphi)\setminus\{\varphi\}$.
 
+  **注记1.8（表达法）** 表达法是指表示公式的方法，同一个公式可以有不同的表达方式，不同表达方式之间可相互定义。关于二元联结词$\land,\lor,\to,\leftrightarrow$ ：
+
+   - 中缀表达法：将二元联结词写在它所联结的两个子公式间，如 $(\varphi\land\psi)$，这种表达法容易阅读，但是长串公式必须在联结词的辖域上增加括号以消除歧义。
+   - 前缀表达法：将二元联结词写在它所联结的两个子公式前，如 $\land\varphi\psi$，这种表达法不会面临优先级问题，长串公式没有歧义，从而无需括号。**波兰式**就采用前缀表达法，此外$\lnot,\land,\lor,\to,\leftrightarrow$ 分别使用 $N,K,A,C,E$ 表示，如 $\land\varphi\psi$ 波兰式表示为$K\varphi\psi$.
+   - 后缀表达法：将二元联结词写在它所联结的两个子公式后，如 $\varphi\psi\land$，和前缀表达法一样，长串公式也没有歧义。
+
+所以，初始符号集中标点符号 $\{),(\}$ 是不必要的，我们可以采用前缀表达法或后缀表达法，再将中缀表达法和标点符号作为方便记号用前缀或后缀表达法定义。
+
+**注记1.9（永真与永假）** 永真（$\top$）和永假（$\bot$）是两个零元真值联结词，是可选的初始符号，也可分别作为重言式和矛盾式的简写，比如如下常见的定义方式：
+
+   - $\top:=p\lor\neg p$；
+   - $\bot:=p\land\neg p$.
+
 ## 真值语义
 
 **定义2.1（真值集）** 真值集$\mathbb{B}=\{0,1\}$，称 $0$ 为假值，$1$ 为真值。
@@ -116,7 +129,7 @@ $$
   - $v\models \neg\varphi :\iff v\not\models\varphi$；
   - $v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi$；
   - $v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi$；
-  - $v\models\varphi\to\psi:\iff v\models\varphi \text{ 蕴含 } v\models\psi$；
+  - $v\models\varphi\to\psi:\iff \text{若 } v\models\varphi \text{ 则 } v\models\psi$；
   - $v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi$.
 
 **定义2.4（真值函数）** 函数 $f:\mathbb{B}^n\to\mathbb{B}$ 称为n元真值函数。以下是五个常见真值函数：

@@ -1011,7 +1011,16 @@
 </ul>
 </li>
 </ol>
-<p><strong>定义1.6（子公式）</strong> 对任意公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，其子公式集 <span class="arithmatex">\(\mathrm{Sub}(\varphi)\)</span> 递归定义如下：</p>
+<p><strong>定义1.6（原子命题出现集合）</strong> 对任意公式 <span class="arithmatex">\(\varphi\)</span>，其出现的原子命题集合 <span class="arithmatex">\(\mathrm{Var}(\varphi)\)</span>，递归定义如下：</p>
+<ul>
+<li><span class="arithmatex">\(\mathrm{Var}(p)={p}\)</span>；</li>
+<li><span class="arithmatex">\(\mathrm{Var}(\neg\varphi)=\mathrm{Var}(\varphi)\)</span>；</li>
+<li><span class="arithmatex">\(\mathrm{Var}((\varphi\land\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)\)</span>；</li>
+<li><span class="arithmatex">\(\mathrm{Var}((\varphi\lor\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)\)</span>；</li>
+<li><span class="arithmatex">\(\mathrm{Var}((\varphi\to\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)\)</span>；</li>
+<li><span class="arithmatex">\(\mathrm{Var}((\varphi\leftrightarrow\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)\)</span>.</li>
+</ul>
+<p><strong>定义1.7（子公式）</strong> 对任意公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，其子公式集 <span class="arithmatex">\(\mathrm{Sub}(\varphi)\)</span> 递归定义如下：</p>
 <ul>
 <li>若 <span class="arithmatex">\(p\in\Phi\)</span>，则 <span class="arithmatex">\(\mathrm{Sub}(p)=\{p\}\)</span>；</li>
 <li>若 <span class="arithmatex">\(\varphi=\neg\psi\)</span>，则 <span class="arithmatex">\(\mathrm{Sub}(\neg\psi)=\mathrm{Sub}(\psi)\cup\{\neg\psi\}\)</span>；</li>
