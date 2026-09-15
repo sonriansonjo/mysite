@@ -80,7 +80,16 @@ $$
      - $\land,\lor$ 左结合；
      - $\to$ 右结合。
 
-**定义1.6（子公式）** 对任意公式 $\varphi\in\mathcal{L}_0$，其子公式集 $\mathrm{Sub}(\varphi)$ 递归定义如下：
+**定义1.6（原子命题出现集合）** 对任意公式 $\varphi$，其出现的原子命题集合 $\mathrm{Var}(\varphi)$，递归定义如下：
+
+   * $\mathrm{Var}(p)={p}$；
+   * $\mathrm{Var}(\neg\varphi)=\mathrm{Var}(\varphi)$；
+   * $\mathrm{Var}((\varphi\land\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)$；
+   * $\mathrm{Var}((\varphi\lor\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)$；
+   * $\mathrm{Var}((\varphi\to\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)$；
+   * $\mathrm{Var}((\varphi\leftrightarrow\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)$.
+
+**定义1.7（子公式）** 对任意公式 $\varphi\in\mathcal{L}_0$，其子公式集 $\mathrm{Sub}(\varphi)$ 递归定义如下：
 
   - 若 $p\in\Phi$，则 $\mathrm{Sub}(p)=\{p\}$；
   - 若 $\varphi=\neg\psi$，则 $\mathrm{Sub}(\neg\psi)=\mathrm{Sub}(\psi)\cup\{\neg\psi\}$；
