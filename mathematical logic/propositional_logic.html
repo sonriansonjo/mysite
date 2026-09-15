@@ -947,17 +947,15 @@
 <ol>
 <li>
 <p>（生成规则）命题逻辑形式语言 <span class="arithmatex">\(\mathcal{L}_0\)</span> 的公式由初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}\)</span> 和以下生成规则构成：</p>
-</li>
-<li>
-<p>若 <span class="arithmatex">\(p\in\Phi\)</span> ，则 <span class="arithmatex">\(p\)</span> 是公式；</p>
-</li>
+<ul>
+<li>若 <span class="arithmatex">\(p\in\Phi\)</span> ，则 <span class="arithmatex">\(p\)</span> 是公式；</li>
 <li>若 <span class="arithmatex">\(\varphi\)</span> 是公式，则 <span class="arithmatex">\(\neg\varphi\)</span> 是公式；</li>
 <li>若 <span class="arithmatex">\(\varphi_1\)</span> 和 <span class="arithmatex">\(\varphi_2\)</span> 是公式，则 <span class="arithmatex">\((\varphi_1\land\varphi_2)\)</span> 是公式；</li>
 <li>若 <span class="arithmatex">\(\varphi_1\)</span> 和 <span class="arithmatex">\(\varphi_2\)</span> 是公式，则 <span class="arithmatex">\((\varphi_1\lor\varphi_2)\)</span>  是公式；</li>
 <li>若 <span class="arithmatex">\(\varphi_1\)</span> 和 <span class="arithmatex">\(\varphi_2\)</span> 是公式，则 <span class="arithmatex">\((\varphi_1\to\varphi_2)\)</span>  是公式；</li>
 <li>若 <span class="arithmatex">\(\varphi_1\)</span> 和 <span class="arithmatex">\(\varphi_2\)</span> 是公式，则 <span class="arithmatex">\((\varphi_1\leftrightarrow\varphi_2)\)</span>  是公式；</li>
-<li>
-<p>除由上述规则形成的公式，没有其他公式。</p>
+<li>除由上述规则形成的公式，没有其他公式。</li>
+</ul>
 </li>
 <li>
 <p>（巴科斯-诺尔范式）给定原子命题集<span class="arithmatex">\(\Phi=\{p_n\mid n\in \mathbb{N}\}\)</span>，命题逻辑形式语言 <span class="arithmatex">\(\mathcal{L}_0\)</span> 定义如下：</p>
@@ -970,20 +968,18 @@
 <ol>
 <li>
 <p>（归纳闭包）给定初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}\)</span> ，<span class="arithmatex">\(\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}\)</span> 是 <span class="arithmatex">\(\Sigma\)</span> 中符号形成的所有有穷字符串构成的集合，<span class="arithmatex">\(\Sigma^{*}\)</span>上的公式构造函数集 <span class="arithmatex">\(F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}\)</span> 定义如下：</p>
-</li>
-<li>
-<p><span class="arithmatex">\(c_{\neg}(\varphi):=\neg\varphi\)</span>；</p>
-</li>
+<ul>
+<li><span class="arithmatex">\(c_{\neg}(\varphi):=\neg\varphi\)</span>；</li>
 <li><span class="arithmatex">\(c_{\land}(\varphi_1,\varphi_2):=(\varphi_1\land\varphi_2)\)</span>；</li>
 <li><span class="arithmatex">\(c_{\lor}(\varphi_1,\varphi_2):=(\varphi_1\lor\varphi_2)\)</span>；</li>
 <li><span class="arithmatex">\(c_{\to}(\varphi_1,\varphi_2):=(\varphi_1\to\varphi_2)\)</span>；</li>
 <li><span class="arithmatex">\(c_{\leftrightarrow}(\varphi_1,\varphi_2):=(\varphi_1\leftrightarrow\varphi_2)\)</span>.</li>
+</ul>
+</li>
 </ol>
 <p>公式集 <span class="arithmatex">\(\Sigma_n\)</span> 定义如下：</p>
-<ul>
-<li><span class="arithmatex">\(\Sigma_0:=\Phi\)</span>；</li>
-<li><span class="arithmatex">\(\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)\)</span>.</li>
-</ul>
+<p>&emsp;<span class="arithmatex">\(\Sigma_0:=\Phi\)</span>；
+  &emsp;<span class="arithmatex">\(\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)\)</span>.</p>
 <p>命题逻辑形式语言 <span class="arithmatex">\(\mathcal{L}_0:=F^{+}(\Phi)=\bigcup_{n\in \mathbb{N}}\Sigma_n\)</span>，即 <span class="arithmatex">\(\mathcal{L}_0\)</span> 是在公式构造函数集 <span class="arithmatex">\(F\)</span> 下的归纳闭包，是满足前述形成规则的最小集合。</p>
 <ol>
 <li>
@@ -1043,14 +1039,14 @@
 <p><strong>定义2.1（真值集）</strong> 真值集<span class="arithmatex">\(\mathbb{B}=\{0,1\}\)</span>，称 <span class="arithmatex">\(0\)</span> 为假值，<span class="arithmatex">\(1\)</span> 为真值。</p>
 <p><strong>定义2.2（赋值）</strong> <span class="arithmatex">\(v:\Phi\to\mathbb{B}\)</span> 是一个赋值，它为每个原子命题指派了一个真假值。</p>
 <p><strong>定义2.3（满足关系）</strong> 任给赋值 <span class="arithmatex">\(v\)</span> 和公式 <span class="arithmatex">\(\varphi,\psi\in\mathcal{L}_0\)</span>，满足关系 <span class="arithmatex">\(\models\)</span> 定义如下：</p>
-<ol>
+<ul>
 <li><span class="arithmatex">\(v\models p :\iff v(p)=1\text{，其中}p\in\Phi\)</span>；</li>
 <li><span class="arithmatex">\(v\models \neg\varphi :\iff v\not\models\varphi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\to\psi:\iff v\models\varphi \text{ 蕴含 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi\)</span>.</li>
-</ol>
+</ul>
 <p><strong>定义2.4（真值函数）</strong> 函数 <span class="arithmatex">\(f:\mathbb{B}^n\to\mathbb{B}\)</span> 称为n元真值函数。以下是五个常见真值函数：</p>
 <p><strong>定义2.5 （赋值函数）</strong> 给定赋值 <span class="arithmatex">\(v:\Phi\to\mathbb{B}\)</span>，赋值函数 <span class="arithmatex">\(\overline{v}:\mathcal{L}_0\to\mathbb{B}\)</span> 递归定义如下：</p>
 <h2 id="_4">自然演绎系统<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
