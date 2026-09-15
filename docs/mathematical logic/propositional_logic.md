@@ -12,13 +12,13 @@
 
 1. （生成规则）命题逻辑形式语言 $\mathcal{L}_0$ 的公式由初始符号集 $\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}$ 和以下生成规则构成：
 
-- 若 $p\in\Phi$ ，则 $p$ 是公式；
-- 若 $\varphi$ 是公式，则 $\neg\varphi$ 是公式；
-- 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\land\varphi_2)$ 是公式；
-- 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\lor\varphi_2)$  是公式；
-- 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\to\varphi_2)$  是公式；
-- 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\leftrightarrow\varphi_2)$  是公式；
-- 除由上述规则形成的公式，没有其他公式。
+    - 若 $p\in\Phi$ ，则 $p$ 是公式；
+    - 若 $\varphi$ 是公式，则 $\neg\varphi$ 是公式；
+    - 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\land\varphi_2)$ 是公式；
+    - 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\lor\varphi_2)$  是公式；
+    - 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\to\varphi_2)$  是公式；
+    - 若 $\varphi_1$ 和 $\varphi_2$ 是公式，则 $(\varphi_1\leftrightarrow\varphi_2)$  是公式；
+    - 除由上述规则形成的公式，没有其他公式。
 
 2. （巴科斯-诺尔范式）给定原子命题集$\Phi=\{p_n\mid n\in \mathbb{N}\}$，命题逻辑形式语言 $\mathcal{L}_0$ 定义如下：
 
@@ -30,16 +30,16 @@ $$
 
 3. （归纳闭包）给定初始符号集 $\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}$ ，$\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}$ 是 $\Sigma$ 中符号形成的所有有穷字符串构成的集合，$\Sigma^{*}$上的公式构造函数集 $F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}$ 定义如下：
 
-- $c_{\neg}(\varphi):=\neg\varphi$；
-- $c_{\land}(\varphi_1,\varphi_2):=(\varphi_1\land\varphi_2)$；
-- $c_{\lor}(\varphi_1,\varphi_2):=(\varphi_1\lor\varphi_2)$；
-- $c_{\to}(\varphi_1,\varphi_2):=(\varphi_1\to\varphi_2)$；
-- $c_{\leftrightarrow}(\varphi_1,\varphi_2):=(\varphi_1\leftrightarrow\varphi_2)$.
+    - $c_{\neg}(\varphi):=\neg\varphi$；
+    - $c_{\land}(\varphi_1,\varphi_2):=(\varphi_1\land\varphi_2)$；
+    - $c_{\lor}(\varphi_1,\varphi_2):=(\varphi_1\lor\varphi_2)$；
+    - $c_{\to}(\varphi_1,\varphi_2):=(\varphi_1\to\varphi_2)$；
+    - $c_{\leftrightarrow}(\varphi_1,\varphi_2):=(\varphi_1\leftrightarrow\varphi_2)$.
 
 公式集 $\Sigma_n$ 定义如下：
 
-- $\Sigma_0:=\Phi$；
-- $\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)$.
+  &emsp;$\Sigma_0:=\Phi$；
+  &emsp;$\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)$.
 
 命题逻辑形式语言 $\mathcal{L}_0:=F^{+}(\Phi)=\bigcup_{n\in \mathbb{N}}\Sigma_n$，即 $\mathcal{L}_0$ 是在公式构造函数集 $F$ 下的归纳闭包，是满足前述形成规则的最小集合。
 
@@ -103,12 +103,12 @@ $$
 
 **定义2.3（满足关系）** 任给赋值 $v$ 和公式 $\varphi,\psi\in\mathcal{L}_0$，满足关系 $\models$ 定义如下：
 
-1. $v\models p :\iff v(p)=1\text{，其中}p\in\Phi$；
-2. $v\models \neg\varphi :\iff v\not\models\varphi$；
-3. $v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi$；
-4. $v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi$；
-5. $v\models\varphi\to\psi:\iff v\models\varphi \text{ 蕴含 } v\models\psi$；
-6. $v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi$.
+- $v\models p :\iff v(p)=1\text{，其中}p\in\Phi$；
+- $v\models \neg\varphi :\iff v\not\models\varphi$；
+- $v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi$；
+- $v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi$；
+- $v\models\varphi\to\psi:\iff v\models\varphi \text{ 蕴含 } v\models\psi$；
+- $v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi$.
 
 **定义2.4（真值函数）** 函数 $f:\mathbb{B}^n\to\mathbb{B}$ 称为n元真值函数。以下是五个常见真值函数：
 
