@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/index.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/ATL/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/ATL/index.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/ATL/syntax_and_semantics/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/ATL/syntax_and_semantics.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/index.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/basic_formal_language_and_metalogic/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/basic_formal_language_and_metalogic.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/mathematical_method/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/mathematical_method.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
     <url>
-         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/naive_set_theory/</loc>
+         <loc>https://sonriansonjo.github.io/mysite/Prerequisites/naive_set_theory_1.html</loc>
          <lastmod>2026-09-12</lastmod>
     </url>
 </urlset>

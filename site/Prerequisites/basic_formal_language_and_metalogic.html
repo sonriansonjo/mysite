@@ -8,37 +8,39 @@
       
       
       
-        <link rel="canonical" href="https://sonriansonjo.github.io/mysite/Prerequisites/mathematical_method/">
+        <link rel="canonical" href="https://sonriansonjo.github.io/mysite/Prerequisites/basic_formal_language_and_metalogic.html">
       
       
-        <link rel="prev" href="../naive_set_theory/">
+        <link rel="prev" href="mathematical_method.html">
       
       
-        <link rel="next" href="../basic_formal_language_and_metalogic/">
+        <link rel="next" href="../ATL/index.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/logic.svg">
+      <link rel="icon" href="../assets/images/logic.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>数学方法 - Sonri an Sonjo在额尼河畔</title>
+        <title>形式语言与元逻辑基础 - Sonri an Sonjo在额尼河畔</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
 
     
     
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
       
     
     
@@ -51,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -90,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Sonri an Sonjo在额尼河畔" class="md-header__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+    <a href="../index.html" title="Sonri an Sonjo在额尼河畔" class="md-header__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数学方法
+              形式语言与元逻辑基础
             
           </span>
         </div>
@@ -118,7 +122,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="切换至黑夜模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至黑夜模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="切换至白昼模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至白昼模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -177,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -200,7 +230,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="index.html" class="md-tabs__link">
           
   
   
@@ -222,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ATL/" class="md-tabs__link">
+        <a href="../ATL/index.html" class="md-tabs__link">
           
   
   
@@ -264,7 +294,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sonri an Sonjo在额尼河畔" class="md-nav__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+    <a href="../index.html" title="Sonri an Sonjo在额尼河畔" class="md-nav__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
@@ -282,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -343,7 +373,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
@@ -387,14 +417,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../naive_set_theory/" class="md-nav__link">
+      <a href="naive_set_theory_1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    素朴集合论
+    素朴集合论1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mathematical_method.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学方法
   
 
     
@@ -431,7 +489,7 @@
   <span class="md-ellipsis">
     
   
-    数学方法
+    形式语言与元逻辑基础
   
 
     
@@ -442,14 +500,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="basic_formal_language_and_metalogic.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    数学方法
+    形式语言与元逻辑基础
   
 
     
@@ -460,6 +518,8 @@
       </a>
       
         
+
+  
 
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
@@ -478,7 +538,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学对象与性质
+        形式语言
       
     </span>
   </a>
@@ -489,7 +549,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学命题与保真规则
+        文法与生成
       
     </span>
   </a>
@@ -500,7 +560,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学证明方法
+        语法树与唯一可读性
       
     </span>
   </a>
@@ -511,7 +571,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        公理与定理
+        逻辑后承及其构造
       
     </span>
   </a>
@@ -522,7 +582,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        逻辑与直觉
+        研究与应用
       
     </span>
   </a>
@@ -533,34 +593,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../basic_formal_language_and_metalogic/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    形式语言与元逻辑基础
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -605,7 +637,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ATL/" class="md-nav__link ">
+            <a href="../ATL/index.html" class="md-nav__link ">
               
   
   
@@ -649,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ATL/syntax_and_semantics/" class="md-nav__link">
+      <a href="../ATL/syntax_and_semantics.html" class="md-nav__link">
         
   
   
@@ -690,6 +722,8 @@
                   <div class="md-sidebar__inner">
                     
 
+  
+
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
@@ -707,7 +741,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学对象与性质
+        形式语言
       
     </span>
   </a>
@@ -718,7 +752,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学命题与保真规则
+        文法与生成
       
     </span>
   </a>
@@ -729,7 +763,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        数学证明方法
+        语法树与唯一可读性
       
     </span>
   </a>
@@ -740,7 +774,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        公理与定理
+        逻辑后承及其构造
       
     </span>
   </a>
@@ -751,7 +785,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        逻辑与直觉
+        研究与应用
       
     </span>
   </a>
@@ -775,24 +809,23 @@
 
 
 
-<h1 id="_1">数学方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="toc">
-<ul>
-<li><a href="#_1">数学方法</a><ul>
-<li><a href="#_2">数学对象与性质</a></li>
-<li><a href="#_3">数学命题与保真规则</a></li>
-<li><a href="#_4">数学证明方法</a></li>
-<li><a href="#_5">公理与定理</a></li>
-<li><a href="#_6">逻辑与直觉</a></li>
+<h1 id="_1">形式语言与元逻辑基础<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<div class="toc"><span class="toctitle">目录</span><ul>
+<li><a href="#_1">形式语言与元逻辑基础</a><ul>
+<li><a href="#_2">形式语言</a></li>
+<li><a href="#_3">文法与生成</a></li>
+<li><a href="#_4">语法树与唯一可读性</a></li>
+<li><a href="#_5">逻辑后承及其构造</a></li>
+<li><a href="#_6">研究与应用</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="_2">数学对象与性质<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h2 id="_3">数学命题与保真规则<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h2 id="_4">数学证明方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h2 id="_5">公理与定理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h2 id="_6">逻辑与直觉<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_2">形式语言<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<h2 id="_3">文法与生成<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<h2 id="_4">语法树与唯一可读性<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<h2 id="_5">逻辑后承及其构造<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+<h2 id="_6">研究与应用<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
 
 
 
@@ -822,7 +855,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../naive_set_theory/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 素朴集合论">
+          <a href="mathematical_method.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 数学方法">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -832,20 +865,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                素朴集合论
+                数学方法
               </div>
             </div>
           </a>
         
         
           
-          <a href="../basic_formal_language_and_metalogic/" class="md-footer__link md-footer__link--next" aria-label="下一页: 形式语言与元逻辑基础">
+          <a href="../ATL/index.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 交替时态逻辑">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                形式语言与元逻辑基础
+                交替时态逻辑
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -884,12 +917,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -8,37 +8,39 @@
       
       
       
-        <link rel="canonical" href="https://sonriansonjo.github.io/mysite/Prerequisites/naive_set_theory/">
+        <link rel="canonical" href="https://sonriansonjo.github.io/mysite/Prerequisites/mathematical_method.html">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="naive_set_theory_1.html">
       
       
-        <link rel="next" href="../mathematical_method/">
+        <link rel="next" href="basic_formal_language_and_metalogic.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/logic.svg">
+      <link rel="icon" href="../assets/images/logic.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>素朴集合论 - Sonri an Sonjo在额尼河畔</title>
+        <title>数学方法 - Sonri an Sonjo在额尼河畔</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
 
     
     
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
       
     
     
@@ -51,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -90,7 +94,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Sonri an Sonjo在额尼河畔" class="md-header__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+    <a href="../index.html" title="Sonri an Sonjo在额尼河畔" class="md-header__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              素朴集合论
+              数学方法
             
           </span>
         </div>
@@ -118,7 +122,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="切换至黑夜模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至黑夜模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="切换至白昼模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至白昼模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -177,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -200,7 +230,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="index.html" class="md-tabs__link">
           
   
   
@@ -222,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ATL/" class="md-tabs__link">
+        <a href="../ATL/index.html" class="md-tabs__link">
           
   
   
@@ -264,7 +294,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Sonri an Sonjo在额尼河畔" class="md-nav__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+    <a href="../index.html" title="Sonri an Sonjo在额尼河畔" class="md-nav__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
@@ -282,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -343,7 +373,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
@@ -384,6 +414,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="naive_set_theory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    素朴集合论1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -403,7 +461,7 @@
   <span class="md-ellipsis">
     
   
-    素朴集合论
+    数学方法
   
 
     
@@ -414,14 +472,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="mathematical_method.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    素朴集合论
+    数学方法
   
 
     
@@ -432,6 +490,8 @@
       </a>
       
         
+
+  
 
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
@@ -447,30 +507,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        I. 公理和类
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I. 公理和类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 类、集合与公理
+        数学定义
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学命题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学证明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公理与定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逻辑与直觉
+      
+    </span>
+  </a>
   
 </li>
       
@@ -490,35 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mathematical_method/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    数学方法
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../basic_formal_language_and_metalogic/" class="md-nav__link">
+      <a href="basic_formal_language_and_metalogic.html" class="md-nav__link">
         
   
   
@@ -578,7 +637,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ATL/" class="md-nav__link ">
+            <a href="../ATL/index.html" class="md-nav__link ">
               
   
   
@@ -622,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ATL/syntax_and_semantics/" class="md-nav__link">
+      <a href="../ATL/syntax_and_semantics.html" class="md-nav__link">
         
   
   
@@ -663,6 +722,8 @@
                   <div class="md-sidebar__inner">
                     
 
+  
+
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
@@ -677,30 +738,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        I. 公理和类
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I. 公理和类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 类、集合与公理
+        数学定义
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学命题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学证明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公理与定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逻辑与直觉
+      
+    </span>
+  </a>
   
 </li>
       
@@ -721,68 +809,23 @@
 
 
 
-<h1 id="_1">素朴集合论<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="toc">
-<ul>
-<li><a href="#_1">素朴集合论</a><ul>
-<li><a href="#i">I. 公理和类</a><ul>
-<li><a href="#1">1. 类、集合与公理</a></li>
-</ul>
-</li>
+<h1 id="_1">数学方法<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<div class="toc"><span class="toctitle">目录</span><ul>
+<li><a href="#_1">数学方法</a><ul>
+<li><a href="#_2">数学定义</a></li>
+<li><a href="#_3">数学命题</a></li>
+<li><a href="#_4">数学证明</a></li>
+<li><a href="#_5">公理与定理</a></li>
+<li><a href="#_6">逻辑与直觉</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="i">I. 公理和类<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. 类、集合与公理<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<h4 id="11">1.1 矛盾陈述<a class="headerlink" href="#11" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>数学陈述（statement）：有真假值的宣称。真值（true）和假值（false）相排斥（一个陈述是真的，那它就不是假的，反之亦然）。
-先决的逻辑规则：被用来帮助确定陈述真假的，已确定真假的数学陈述可经组合逻辑地确定其他一些数学陈述的真假。基本逻辑规则必须得到遵守，否则论证就被评价为“不合逻辑”。</p>
-</li>
-<li>
-<p>数学论证（argument）/演绎（deduction）：数学陈述按经逻辑规则确定真假的先后顺序排列的系统，由于逻辑规则的组织排列，这一系统是严谨的。</p>
-</li>
-<li>
-<p>自明（self-evident）陈述：在证明系统中，最开始的数学陈述不能被其他数学陈述证明，它的真假值基于常识（common sense）而宣称。</p>
-</li>
-<li>
-<p>论域：给出的确定的自证陈述集（<span class="arithmatex">\(\mathscr{A}\)</span>）和一系列逻辑规则，就确定了所有可从自明陈述集推导出为真的陈述，这些陈述构成论域（<span class="arithmatex">\(\mathscr{U}_\mathscr{A}\)</span>），一个论域可构建一门供探索发现的数学理论。</p>
-</li>
-<li>
-<p>矛盾陈述（contradictory statment）/悖论（paradox）：一个既被确定为真又被确定为假的陈述。如果从一个被视作无矛盾的自明陈述中逻辑地得出悖论，则需要检查导致悖论的假设。</p>
-</li>
-</ul>
-<blockquote>
-<p>生词：vice-versa反之亦然；elaborate详尽的；scrutiny仔细检查；renegade叛徒；ingenuity聪明才智</p>
-</blockquote>
-<h4 id="12">1.2 集合<a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
-<ul>
-<li>素朴的集合理解：</li>
-</ul>
-<p>（1）集合完全由它的元素决定，两个集合相等当且仅当它们具有相同的元素。[re：外延公理：<span class="arithmatex">\(\forall A \forall B (\forall x (x \in A \leftrightarrow x \in B) \rightarrow A = B)\)</span>]</p>
-<p>（2）集合由它元素所分享的性质定义，这个性质是无模糊被良好表述的，以至于可以明确判断一个给出的元素是否属于该集合。[<span class="arithmatex">\(\exists B \forall x (x \in B \leftrightarrow \varphi(x))\)</span>]</p>
-<p>“是一个集合”也是一种性质，所以存在关于集合的集合。</p>
-<ul>
-<li>罗素悖论：集合<span class="arithmatex">\(R\)</span>是所有“不是自身元素的集合”构成的集合。如果<span class="arithmatex">\(R\)</span>属于所有“不是自身元素的集合”构成的集合，那么<span class="arithmatex">\(R\)</span>具有“不是自身元素的集合”这一性质，<span class="arithmatex">\(R\)</span>不属于它自身，即不属于所有“不是自身元素的集合”构成的集合；如果<span class="arithmatex">\(R\)</span>不属于所有“不是自身元素的集合”构成的集合，那么<span class="arithmatex">\(R\)</span>不属于它自身，因而具有“不是自身元素的集合”这一性质，所以<span class="arithmatex">\(R\)</span>属于所有“不是自身元素的集合”构成的集合。“所有‘不是自身元素的集合’构成的集合属于所有‘不是自身元素的集合’构成的集合”是一个悖论。[re：<span class="arithmatex">\(R=\{x\mid x\not\in x\}\text{;}R\in R\leftrightarrow R\not\in R \Rightarrow \bot\)</span>]</li>
-</ul>
-<p>是哪些错误的假设导致了这一悖论？许多数学家开始追溯到“集合”这一概念，该问题在20世纪初具有高优先权，并发展出了集合论的公理系统。</p>
-<blockquote>
-<p>生词：hockey曲棍球；entity实体；extravagant挥霍的/铺张浪费的；trivial平凡的/琐碎的/微不足道的；malicious virus恶意病毒；dormant休眠的/潜伏的；undermine破坏/削弱信心；irrefutable无可辩驳的；crack瑕疵/缺点；erroneous错误的</p>
-</blockquote>
-<h4 id="13">1.3 公理系统<a class="headerlink" href="#13" title="Permanent link">&para;</a></h4>
-<p>公理系统的建立：（1）声明原初或未定义概念，它们没有固有意义，虽然表述文字会引起阅读者心灵中的直觉观念；（2）宣布概念之间关系的特别的规则和性质，被称为“公理”。</p>
-<ul>
-<li>欧几里得公理系统：欧几里得是第一个用公理化方法研究几何学的人。在他的公理系统中：</li>
-</ul>
-<p>（1）欧几里得将“点”和“线”宣布为原初概念；</p>
-<p>（2）欧几里得将关于点和线性质的描述作为公理，这些公理的陈述是被宣布为自明而假定为真的（而非逻辑演绎得到），它构成了被称为“欧几里得几何”的论域；</p>
-<p>（3）欧几里得用演绎推理得到多种真的几何学陈述，声称前提完全来自于a.公理和b.已在前面证明为真的陈述。</p>
-<p>不过，欧几里得还是不知不觉使用了在公理和以证得陈述之外的前提，1899年大卫·希尔伯特修订了欧几里得公理系统为3个原初概念和21条公理，1902年一条公理被认为是多余的而删除至20条。</p>
-<blockquote>
-<p>生词：intrinsic固有的/内在的；scrutiny仔细检查；err犯错误；redundant多余的</p>
-</blockquote>
+<h2 id="_2">数学定义<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<h2 id="_3">数学命题<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<h2 id="_4">数学证明<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<h2 id="_5">公理与定理<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+<h2 id="_6">逻辑与直觉<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
 
 
 
@@ -812,7 +855,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 预备知识">
+          <a href="naive_set_theory_1.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 素朴集合论1">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -822,20 +865,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                预备知识
+                素朴集合论1
               </div>
             </div>
           </a>
         
         
           
-          <a href="../mathematical_method/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数学方法">
+          <a href="basic_formal_language_and_metalogic.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 形式语言与元逻辑基础">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                数学方法
+                形式语言与元逻辑基础
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -874,12 +917,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
