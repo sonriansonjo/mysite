@@ -37,6 +37,7 @@ $$
    - $c_{\leftrightarrow}(\varphi_1,\varphi_2):=(\varphi_1\leftrightarrow\varphi_2)$.
     
    公式集 $\Sigma_n$ 定义如下：
+   
    - $\Sigma_0:=\Phi$；
    - $\Sigma_{n+1}:=\Sigma_{n}\cup F(\Sigma_n)$.
    
