@@ -43,7 +43,7 @@ $$
 
 命题逻辑形式语言 $\mathcal{L}_0:=F^{+}(\Phi)=\bigcup_{n\in \mathbb{N}}\Sigma_n$，即 $\mathcal{L}_0$ 是在公式构造函数集 $F$ 下的归纳闭包，是满足前述形成规则的最小集合。
 
-4. （公式构造序列）公式构造序列$\lang\varepsilon_1,\varepsilon_2,...,\varepsilon_n\rang \in (\Sigma^{*})^{*}$ 是字符串集$\Sigma^{*}$ 上的有限序列（即对任意的$i\in\{1,2,..,n\}$，$\varepsilon_i\in\Sigma^{*}$），其中对于任意$i\in\{1,2,...,n\}$， $\varepsilon_i$ 满足以下情形之一：
+4. （公式构造序列）公式构造序列$\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n\rangle \in (\Sigma^{*})^{*}$ 是字符串集$\Sigma^{*}$ 上的有限序列（即对任意的$i\in\{1,2,..,n\}$，$\varepsilon_i\in\Sigma^{*}$），其中对于任意$i\in\{1,2,...,n\}$， $\varepsilon_i$ 满足以下情形之一：
 
     - 要么 $\varepsilon_i\in\Phi$ ；
     - 要么存在 $j\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\neg}(\varepsilon_j)$ ；
@@ -52,7 +52,7 @@ $$
     - 要么存在 $j,k\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\to}(\varepsilon_j,\varepsilon_k)$ ；
     - 要么存在 $j,k\in\{1,2,...,i\}$ 使得 $\varepsilon_i=c_{\leftrightarrow}(\varepsilon_j,\varepsilon_k)$ .
 
-字符串 $\varepsilon\in\Sigma^{*}$ 是公式，当且仅当存在公式构造序列$\lang\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle$.
+字符串 $\varepsilon\in\Sigma^{*}$ 是公式，当且仅当存在公式构造序列$\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle$.
 
 **定理1.3（结构归纳法）** 对任意公式 $\varphi\in\mathcal{L}_0$，$\varphi$ 具有性质 $P$ 当且仅当：
 
