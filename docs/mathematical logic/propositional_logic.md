@@ -129,12 +129,70 @@ $$
   - $v\models \neg\varphi :\iff v\not\models\varphi$；
   - $v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi$；
   - $v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi$；
-  - $v\models\varphi\to\psi:\iff \text{若 } v\models\varphi \text{ 则 } v\models\psi$；
+  - $v\models\varphi\to\psi:\iff v\not\models\varphi \text{ 或者 } v\models\psi$；
   - $v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi$.
 
-**定义2.4（真值函数）** 函数 $f:\mathbb{B}^n\to\mathbb{B}$ 称为n元真值函数。以下是五个常见真值函数：
+关于两个逻辑常量：
+  - $v\models \top$；
+  - $v\not\models\bot$.
 
-**定义2.5 （赋值函数）** 给定赋值 $v:\Phi\to\mathbb{B}$，赋值函数 $\overline{v}:\mathcal{L}_0\to\mathbb{B}$ 递归定义如下：
+对于公式集 $\Gamma\subseteq\mathcal{L}_0$，$v\models\Gamma:\iff \text{对于任意 }\varphi\in\Gamma\text{，}v\models\varphi$.
+
+**定义2.4（重言式、可满足式、矛盾式）** 
+
+1. 对于任意 $\varphi\in\mathcal{L}_0$，$\varphi$ 是重言式 $:\iff$ 对于任意赋值 $v$，$v\models\varphi$ .
+2. 对于任意 $\varphi\in\mathcal{L}_0$，$\varphi$ 是矛盾式 $:\iff$ 对于任意赋值 $v$，$v\not\models\varphi$ .
+3. 对于任意 $\varphi\in\mathcal{L}_0$，$\varphi$ 是偶然式 $:\iff$ $\varphi$ 不是重言式，并且 $\varphi$ 不是矛盾式。
+4. 对于任意 $\varphi\in\mathcal{L}_0$，$\varphi$ 是可满足的 $:\iff$ 存在赋值 $v$，$v\models\varphi$ .
+5. 对于任意 $\Gamma\subseteq\mathcal{L}_0$，$\Gamma$ 是可满足的 $:\iff$ 存在赋值 $v$，$v\models\Gamma$ .
+6. 偶然式是可满足的，重言式是可满足的，矛盾式是不可满足的。
+
+易知 $\top$ 是重言式，$\bot$ 是矛盾式。
+ 
+**定义2.5（真值函数）** 函数 $f:\mathbb{B}^n\to\mathbb{B}$ 称为n元真值函数。以下是常见真值函数：
+   
+   - $f_{\neg}(x)=\begin{cases}1,\quad x=0\\0,\quad{\rm 否则}\end{cases}$
+   - $f_{\land}(x,y)=\begin{cases}1,\quad x=y=1\\0,\quad{\rm 否则}\end{cases}$
+   - $f_{\lor}(x,y)=\begin{cases}0,\quad x=y=0\\1,\quad{\rm 否则}\end{cases}$
+   - $f_{\to}(x,y)=\begin{cases}0,\quad x=1{\rm 并且 }y=0\\1,\quad{\rm 否则}\end{cases}$
+   - $f_{\leftrightarrow}(x,y)=\begin{cases}1,\quad x=y\\0,\quad{\rm 否则}\end{cases}$
+   - $f_{\mid}(x,y)=\begin{cases}0,\quad x=y=1\\1,\quad{\rm 否则}\end{cases}$
+   - $f_{\downarrow}(x,y)=\begin{cases}1,\quad x=y=0\\0,\quad{\rm 否则}\end{cases}$
+
+以下**真值函数表**罗列了常见真值函数所有输入和对应的输出：
+| $x$ | $y$ | $f_{\neg}(x)$ | $f_{\land}(x,y)$ | $f_{\lor}(x,y)$ | $f_{\to}(x,y)$ | $f_{\leftrightarrow}(x,y)$ | $f_{\mid}(x,y)$ | $f_{\downarrow}(x,y)$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
+
+符号$\mid$ 称为谢弗尔竖，符号$\downarrow$ 称为皮尔士箭头。
+
+**定义2.6（赋值函数）** 给定赋值 $v:\Phi\to\mathbb{B}$，赋值函数 $\hat{v}:\mathcal{L}_0\to\mathbb{B}$ 递归定义如下：
+
+   - $\hat{v}(p):=v(p)$，其中$p\in\Phi$；
+   - $\hat{v}(\neg \varphi):=f_{\neg}[\hat{v}(\varphi)]$；
+   - $\hat{v}(\varphi\land\psi):=f_{\land}[\hat{v}(\varphi),\hat{v}(\psi)]$；
+   - $\hat{v}(\varphi\lor\psi):=f_{\lor}[\hat{v}(\varphi),\hat{v}(\psi)]$；
+   - $\hat{v}(\varphi\to\psi):=f_{\to}[\hat{v}(\varphi),\hat{v}(\psi)]$；
+   - $\hat{v}(\varphi\leftrightarrow\psi):=f_{\leftrightarrow}[\hat{v}(\varphi),\hat{v}(\psi)]$.
+
+对于两个逻辑常量：
+   - $\hat{v}(\top):=1$；
+   - $\hat{v}(\bot):=0$.
+
+**定理2.7（赋值函数与满足关系）** 给定公式 $\varphi\in\mathcal{L}_0$ 和赋值 $v$， $v\models\varphi\iff \hat{v}(\varphi)=1$. 
+
+这意味着除了**定义2.3**，我们还可以选择使用赋值函数定义赋值 $v$ 的满足关系。
+
+**定理2.8（局部确定性）** 任给赋值 $v_1$ 和 $v_2$，对于任意 $p\in\mathrm{Var}(\varphi)$，若$v_1(p)=v_2(p)$，则 $v_1 \models \varphi \iff v_2 \models\varphi$. 也就是说，公式的真值只依赖于其中出现的原子命题。
+
+**定义2.9（语义后承）** 对于$\Gamma\subseteq\mathcal{L}_0,\varphi\in\mathcal{L}_0$，$\Gamma\models\varphi:\iff {\rm 对所有的赋值}v {，若} v\models\Gamma {，则}v\models\varphi$.
+
+   - $\varphi$ 是重言式$\iff \emptyset\models\varphi$.  通常将 $\emptyset\models\varphi$ 简记为$\models\varphi$.
+
+**定义2.10（语义等值）** 对于 $\varphi,\psi\in\mathcal{L}_0$，$\varphi\equiv\psi:\iff\{\varphi\}\models\psi\text{ 并且 }\{\psi\}\models\varphi$，或者等价地，$\varphi\equiv\psi:\iff\models\varphi\leftrightarrow\psi$.
 
 ## 自然演绎系统
 

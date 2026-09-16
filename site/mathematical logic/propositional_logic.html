@@ -937,14 +937,14 @@
 
 <h1 id="_1">命题逻辑（零阶逻辑）<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
 <h2 id="_2">形式语言<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<p><strong>定义1.1（初始符号集）</strong> 命题逻辑初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\neg,\lor,\land,\to,\leftrightarrow,),(\}\)</span> .其中：</p>
+<p><strong>定义1.1（初始符号集）</strong> 命题逻辑初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\neg,\land,\lor,\to,\leftrightarrow,),(\}\)</span> .其中：</p>
 <ul>
 <li><span class="arithmatex">\(\Phi=\{p_n\mid n\in \mathbb{N}\}\)</span> 是可数无穷的原子命题集，其元素称为原子命题；</li>
-<li><span class="arithmatex">\(\lnot,\lor,\land,\to,\leftrightarrow\)</span> 被称为逻辑联结词；</li>
+<li><span class="arithmatex">\(\neg,\land,\lor,\to,\leftrightarrow\)</span> 被称为逻辑联结词，其中 <span class="arithmatex">\(\neg\)</span> 是一元联结词，<span class="arithmatex">\(\land,\lor,\to,\leftrightarrow\)</span> 是二元联结词；</li>
 <li><span class="arithmatex">\(),(\)</span> 是标点符号。</li>
 </ul>
 <p><strong>定义1.2（形式语言）</strong> </p>
-<p><strong>1. （生成规则）</strong> 命题逻辑形式语言 <span class="arithmatex">\(\mathcal{L}_0\)</span> 的公式由初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}\)</span> 和以下生成规则构成：</p>
+<p><strong>1. （生成规则）</strong> 命题逻辑形式语言 <span class="arithmatex">\(\mathcal{L}_0\)</span> 的公式由初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\lnot,\land,\lor,\to,\leftrightarrow,),(\}\)</span> 和以下生成规则构成：</p>
 <ul>
 <li>若 <span class="arithmatex">\(p\in\Phi\)</span> ，则 <span class="arithmatex">\(p\)</span> 是公式；</li>
 <li>若 <span class="arithmatex">\(\varphi\)</span> 是公式，则 <span class="arithmatex">\(\neg\varphi\)</span> 是公式；</li>
@@ -959,7 +959,7 @@
    \mathcal{L}_0\ni\varphi::= p\mid\neg \varphi\mid(\varphi_1\land\varphi_2)\mid(\varphi_1\lor\varphi_2)\mid(\varphi_1\to\varphi_2)\mid(\varphi_1\leftrightarrow\varphi_2)
 \]</div>
 <p>其中<span class="arithmatex">\(p\in\Phi\)</span>。</p>
-<p><strong>3. （归纳闭包）</strong> 给定初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\lnot,\lor,\land,\to,\leftrightarrow,),(\}\)</span> ，<span class="arithmatex">\(\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}\)</span> 是 <span class="arithmatex">\(\Sigma\)</span> 中符号形成的所有有穷字符串构成的集合，<span class="arithmatex">\(\Sigma^{*}\)</span>上的公式构造函数集 <span class="arithmatex">\(F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}\)</span> 定义如下：</p>
+<p><strong>3. （归纳闭包）</strong> 给定初始符号集 <span class="arithmatex">\(\Sigma=\Phi\cup\{\lnot,\land,\lor,\to,\leftrightarrow,),(\}\)</span> ，<span class="arithmatex">\(\Sigma^{*}=\bigcup_{n\in\mathbb{N}}\Sigma^{n}\)</span> 是 <span class="arithmatex">\(\Sigma\)</span> 中符号形成的所有有穷字符串构成的集合，<span class="arithmatex">\(\Sigma^{*}\)</span>上的公式构造函数集 <span class="arithmatex">\(F=\{c_{\neg},c_{\land},c_{\lor},c_{\to},c_{\leftrightarrow}\}\)</span> 定义如下：</p>
 <ul>
 <li><span class="arithmatex">\(c_{\neg}(\varphi):=\neg\varphi\)</span>；</li>
 <li><span class="arithmatex">\(c_{\land}(\varphi_1,\varphi_2):=(\varphi_1\land\varphi_2)\)</span>；</li>
@@ -982,7 +982,7 @@
 <li>要么存在 <span class="arithmatex">\(j,k\in\{1,2,...,i\}\)</span> 使得 <span class="arithmatex">\(\varepsilon_i=c_{\to}(\varepsilon_j,\varepsilon_k)\)</span> ；</li>
 <li>要么存在 <span class="arithmatex">\(j,k\in\{1,2,...,i\}\)</span> 使得 <span class="arithmatex">\(\varepsilon_i=c_{\leftrightarrow}(\varepsilon_j,\varepsilon_k)\)</span> .</li>
 </ul>
-<p>字符串 <span class="arithmatex">\(\varepsilon\in\Sigma^{*}\)</span> 是公式，当且仅当存在公式构造序列<span class="arithmatex">\(\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle\)</span>.</p>
+<p>字符串 <span class="arithmatex">\(\varepsilon\in\Sigma^{*}\)</span> 是公式，当且仅当存在公式构造序列 <span class="arithmatex">\(\langle\varepsilon_1,\varepsilon_2,...,\varepsilon_n,\varepsilon\rangle\)</span>.</p>
 <p><strong>定理1.3（结构归纳法）</strong> 对任意公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 具有性质 <span class="arithmatex">\(P\)</span> 当且仅当：</p>
 <ol>
 <li>对任意公式  <span class="arithmatex">\(\varphi\in\Phi\)</span> ，<span class="arithmatex">\(\varphi\)</span> 具有性质 <span class="arithmatex">\(P\)</span> ；并且</li>
@@ -1011,9 +1011,9 @@
 </ul>
 </li>
 </ol>
-<p><strong>定义1.6（原子命题出现集合）</strong> 对任意公式 <span class="arithmatex">\(\varphi\)</span>，其出现的原子命题集合 <span class="arithmatex">\(\mathrm{Var}(\varphi)\)</span>，递归定义如下：</p>
+<p><strong>定义1.6（原子命题出现）</strong> 对任意公式 <span class="arithmatex">\(\varphi\)</span>，其出现的原子命题集 <span class="arithmatex">\(\mathrm{Var}(\varphi)\)</span> 递归定义如下：</p>
 <ul>
-<li><span class="arithmatex">\(\mathrm{Var}(p)={p}\)</span>；</li>
+<li><span class="arithmatex">\(\mathrm{Var}(p)=\{p\}\)</span>；</li>
 <li><span class="arithmatex">\(\mathrm{Var}(\neg\varphi)=\mathrm{Var}(\varphi)\)</span>；</li>
 <li><span class="arithmatex">\(\mathrm{Var}((\varphi\land\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)\)</span>；</li>
 <li><span class="arithmatex">\(\mathrm{Var}((\varphi\lor\psi))=\mathrm{Var}(\varphi)\cup\mathrm{Var}(\psi)\)</span>；</li>
@@ -1034,6 +1034,18 @@
   \mathrm{Sub}(\varphi_1)\cup\mathrm{Sub}(\varphi_2)\cup\{(\varphi_1\leftrightarrow\varphi_2)\}\)</span>.</li>
 </ul>
 <p>若 <span class="arithmatex">\(\psi\in\mathrm{Sub}(\varphi)\)</span> 且 <span class="arithmatex">\(\psi\ne\varphi\)</span>，则称 <span class="arithmatex">\(\psi\)</span> 为 <span class="arithmatex">\(\varphi\)</span> 的真子公式。记为<span class="arithmatex">\(\mathrm{Sub}^-(\varphi)=\mathrm{Sub}(\varphi)\setminus\{\varphi\}\)</span>.</p>
+<p><strong>注记1.8（表达法）</strong> 表达法是指表示公式的方法，同一个公式可以有不同的表达方式，不同表达方式之间可相互定义。关于二元联结词<span class="arithmatex">\(\land,\lor,\to,\leftrightarrow\)</span> ：</p>
+<ul>
+<li>中缀表达法：将二元联结词写在它所联结的两个子公式间，如 <span class="arithmatex">\((\varphi\land\psi)\)</span>，这种表达法容易阅读，但是长串公式必须在联结词的辖域上增加括号以消除歧义。</li>
+<li>前缀表达法：将二元联结词写在它所联结的两个子公式前，如 <span class="arithmatex">\(\land\varphi\psi\)</span>，这种表达法不会面临优先级问题，长串公式没有歧义，从而无需括号。<strong>波兰式</strong>就采用前缀表达法，此外<span class="arithmatex">\(\lnot,\land,\lor,\to,\leftrightarrow\)</span> 分别使用 <span class="arithmatex">\(N,K,A,C,E\)</span> 表示，如 <span class="arithmatex">\(\land\varphi\psi\)</span> 波兰式表示为<span class="arithmatex">\(K\varphi\psi\)</span>.</li>
+<li>后缀表达法：将二元联结词写在它所联结的两个子公式后，如 <span class="arithmatex">\(\varphi\psi\land\)</span>，和前缀表达法一样，长串公式也没有歧义。</li>
+</ul>
+<p>所以，初始符号集中标点符号 <span class="arithmatex">\(\{),(\}\)</span> 是不必要的，我们可以采用前缀表达法或后缀表达法，再将中缀表达法和标点符号作为方便记号用前缀或后缀表达法定义。</p>
+<p><strong>注记1.9（永真与永假）</strong> 永真（<span class="arithmatex">\(\top\)</span>）和永假（<span class="arithmatex">\(\bot\)</span>）是两个零元真值联结词，是可选的初始符号，也可分别作为重言式和矛盾式的简写，比如如下常见的定义方式：</p>
+<ul>
+<li><span class="arithmatex">\(\top:=p\lor\neg p\)</span>；</li>
+<li><span class="arithmatex">\(\bot:=p\land\neg p\)</span>.</li>
+</ul>
 <h2 id="_3">真值语义<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
 <p><strong>定义2.1（真值集）</strong> 真值集<span class="arithmatex">\(\mathbb{B}=\{0,1\}\)</span>，称 <span class="arithmatex">\(0\)</span> 为假值，<span class="arithmatex">\(1\)</span> 为真值。</p>
 <p><strong>定义2.2（赋值）</strong> <span class="arithmatex">\(v:\Phi\to\mathbb{B}\)</span> 是一个赋值，它为每个原子命题指派了一个真假值。</p>
@@ -1043,7 +1055,7 @@
 <li><span class="arithmatex">\(v\models \neg\varphi :\iff v\not\models\varphi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi\)</span>；</li>
-<li><span class="arithmatex">\(v\models\varphi\to\psi:\iff v\models\varphi \text{ 蕴含 } v\models\psi\)</span>；</li>
+<li><span class="arithmatex">\(v\models\varphi\to\psi:\iff \text{若 } v\models\varphi \text{ 则 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi\)</span>.</li>
 </ul>
 <p><strong>定义2.4（真值函数）</strong> 函数 <span class="arithmatex">\(f:\mathbb{B}^n\to\mathbb{B}\)</span> 称为n元真值函数。以下是五个常见真值函数：</p>
