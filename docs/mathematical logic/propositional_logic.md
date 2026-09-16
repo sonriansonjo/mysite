@@ -181,6 +181,7 @@ $$
    - $\hat{v}(\varphi\leftrightarrow\psi):=f_{\leftrightarrow}[\hat{v}(\varphi),\hat{v}(\psi)]$.
 
 对于两个逻辑常量：
+
    - $\hat{v}(\top):=1$；
    - $\hat{v}(\bot):=0$.
 
