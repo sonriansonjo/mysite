@@ -160,6 +160,7 @@ $$
    - $f_{\downarrow}(x,y)=\begin{cases}1,\quad x=y=0\\0,\quad{\rm 否则}\end{cases}$
 
 以下**真值函数表**罗列了常见真值函数所有输入和对应的输出：
+
 | $x$ | $y$ | $f_{\neg}(x)$ | $f_{\land}(x,y)$ | $f_{\lor}(x,y)$ | $f_{\to}(x,y)$ | $f_{\leftrightarrow}(x,y)$ | $f_{\mid}(x,y)$ | $f_{\downarrow}(x,y)$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
