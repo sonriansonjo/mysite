@@ -133,6 +133,7 @@ $$
   - $v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi$.
 
 关于两个逻辑常量：
+
   - $v\models \top$；
   - $v\not\models\bot$.
 
