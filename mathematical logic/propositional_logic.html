@@ -1055,11 +1055,61 @@
 <li><span class="arithmatex">\(v\models \neg\varphi :\iff v\not\models\varphi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi\)</span>；</li>
-<li><span class="arithmatex">\(v\models\varphi\to\psi:\iff \text{若 } v\models\varphi \text{ 则 } v\models\psi\)</span>；</li>
+<li><span class="arithmatex">\(v\models\varphi\to\psi:\iff v\not\models\varphi \text{ 或者 } v\models\psi\)</span>；</li>
 <li><span class="arithmatex">\(v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi\)</span>.</li>
 </ul>
-<p><strong>定义2.4（真值函数）</strong> 函数 <span class="arithmatex">\(f:\mathbb{B}^n\to\mathbb{B}\)</span> 称为n元真值函数。以下是五个常见真值函数：</p>
-<p><strong>定义2.5 （赋值函数）</strong> 给定赋值 <span class="arithmatex">\(v:\Phi\to\mathbb{B}\)</span>，赋值函数 <span class="arithmatex">\(\overline{v}:\mathcal{L}_0\to\mathbb{B}\)</span> 递归定义如下：</p>
+<p>关于两个逻辑常量：
+  - <span class="arithmatex">\(v\models \top\)</span>；
+  - <span class="arithmatex">\(v\not\models\bot\)</span>.</p>
+<p>对于公式集 <span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0\)</span>，<span class="arithmatex">\(v\models\Gamma:\iff \text{对于任意 }\varphi\in\Gamma\text{，}v\models\varphi\)</span>.</p>
+<p><strong>定义2.4（重言式、可满足式、矛盾式）</strong> </p>
+<ol>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是重言式 <span class="arithmatex">\(:\iff\)</span> 对于任意赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\models\varphi\)</span> .</li>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是矛盾式 <span class="arithmatex">\(:\iff\)</span> 对于任意赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\not\models\varphi\)</span> .</li>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是偶然式 <span class="arithmatex">\(:\iff\)</span> <span class="arithmatex">\(\varphi\)</span> 不是重言式，并且 <span class="arithmatex">\(\varphi\)</span> 不是矛盾式。</li>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是可满足的 <span class="arithmatex">\(:\iff\)</span> 存在赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\models\varphi\)</span> .</li>
+<li>对于任意 <span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0\)</span>，<span class="arithmatex">\(\Gamma\)</span> 是可满足的 <span class="arithmatex">\(:\iff\)</span> 存在赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\models\Gamma\)</span> .</li>
+<li>偶然式是可满足的，重言式是可满足的，矛盾式是不可满足的。</li>
+</ol>
+<p>易知 <span class="arithmatex">\(\top\)</span> 是重言式，<span class="arithmatex">\(\bot\)</span> 是矛盾式。</p>
+<p><strong>定义2.5（真值函数）</strong> 函数 <span class="arithmatex">\(f:\mathbb{B}^n\to\mathbb{B}\)</span> 称为n元真值函数。以下是常见真值函数：</p>
+<ul>
+<li><span class="arithmatex">\(f_{\neg}(x)=\begin{cases}1,\quad x=0\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\land}(x,y)=\begin{cases}1,\quad x=y=1\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\lor}(x,y)=\begin{cases}0,\quad x=y=0\\1,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\to}(x,y)=\begin{cases}0,\quad x=1{\rm 并且 }y=0\\1,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\leftrightarrow}(x,y)=\begin{cases}1,\quad x=y\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\mid}(x,y)=\begin{cases}0,\quad x=y=1\\1,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\downarrow}(x,y)=\begin{cases}1,\quad x=y=0\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+</ul>
+<p>以下<strong>真值函数表</strong>罗列了常见真值函数所有输入和对应的输出：
+| <span class="arithmatex">\(x\)</span> | <span class="arithmatex">\(y\)</span> | <span class="arithmatex">\(f_{\neg}(x)\)</span> | <span class="arithmatex">\(f_{\land}(x,y)\)</span> | <span class="arithmatex">\(f_{\lor}(x,y)\)</span> | <span class="arithmatex">\(f_{\to}(x,y)\)</span> | <span class="arithmatex">\(f_{\leftrightarrow}(x,y)\)</span> | <span class="arithmatex">\(f_{\mid}(x,y)\)</span> | <span class="arithmatex">\(f_{\downarrow}(x,y)\)</span> |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |</p>
+<p>符号<span class="arithmatex">\(\mid\)</span> 称为谢弗尔竖，符号<span class="arithmatex">\(\downarrow\)</span> 称为皮尔士箭头。</p>
+<p><strong>定义2.6（赋值函数）</strong> 给定赋值 <span class="arithmatex">\(v:\Phi\to\mathbb{B}\)</span>，赋值函数 <span class="arithmatex">\(\hat{v}:\mathcal{L}_0\to\mathbb{B}\)</span> 递归定义如下：</p>
+<ul>
+<li><span class="arithmatex">\(\hat{v}(p):=v(p)\)</span>，其中<span class="arithmatex">\(p\in\Phi\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\neg \varphi):=f_{\neg}[\hat{v}(\varphi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\land\psi):=f_{\land}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\lor\psi):=f_{\lor}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\to\psi):=f_{\to}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\leftrightarrow\psi):=f_{\leftrightarrow}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>.</li>
+</ul>
+<p>对于两个逻辑常量：
+   - <span class="arithmatex">\(\hat{v}(\top):=1\)</span>；
+   - <span class="arithmatex">\(\hat{v}(\bot):=0\)</span>.</p>
+<p><strong>定理2.7（赋值函数与满足关系）</strong> 给定公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span> 和赋值 <span class="arithmatex">\(v\)</span>， <span class="arithmatex">\(v\models\varphi\iff \hat{v}(\varphi)=1\)</span>. </p>
+<p>这意味着除了<strong>定义2.3</strong>，我们还可以选择使用赋值函数定义赋值 <span class="arithmatex">\(v\)</span> 的满足关系。</p>
+<p><strong>定理2.8（局部确定性）</strong> 任给赋值 <span class="arithmatex">\(v_1\)</span> 和 <span class="arithmatex">\(v_2\)</span>，对于任意 <span class="arithmatex">\(p\in\mathrm{Var}(\varphi)\)</span>，若<span class="arithmatex">\(v_1(p)=v_2(p)\)</span>，则 <span class="arithmatex">\(v_1 \models \varphi \iff v_2 \models\varphi\)</span>. 也就是说，公式的真值只依赖于其中出现的原子命题。</p>
+<p><strong>定义2.9（语义后承）</strong> 对于<span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0,\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\Gamma\models\varphi:\iff {\rm 对所有的赋值}v {，若} v\models\Gamma {，则}v\models\varphi\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(\varphi\)</span> 是重言式<span class="arithmatex">\(\iff \emptyset\models\varphi\)</span>.  通常将 <span class="arithmatex">\(\emptyset\models\varphi\)</span> 简记为<span class="arithmatex">\(\models\varphi\)</span>.</li>
+</ul>
+<p><strong>定义2.10（语义等值）</strong> 对于 <span class="arithmatex">\(\varphi,\psi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\equiv\psi:\iff\{\varphi\}\models\psi\text{ 并且 }\{\psi\}\models\varphi\)</span>，或者等价地，<span class="arithmatex">\(\varphi\equiv\psi:\iff\models\varphi\leftrightarrow\psi\)</span>.</p>
 <h2 id="_4">自然演绎系统<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
 <h2 id="_5">希尔伯特公理系统<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <h2 id="_6">可靠性和完全性<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
