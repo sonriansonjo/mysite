@@ -23,9 +23,6 @@ theme:
   features:
     - search.suggest
     - search.highlight
-  icon: 
-    logo: material/notebook-edit
-  features:
     - navigation.footer
     - navigation.instant
     - navigation.instant.progress
@@ -33,6 +30,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
+  icon: 
+    logo: material/notebook-edit
 nav:
   - 首页: index.md 
   - 预备知识: 
