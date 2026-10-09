@@ -177,6 +177,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -1156,9 +1158,11 @@
 <li><span class="arithmatex">\(\hat{v}(\varphi\to\psi):=f_{\to}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
 <li><span class="arithmatex">\(\hat{v}(\varphi\leftrightarrow\psi):=f_{\leftrightarrow}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>.</li>
 </ul>
-<p>对于两个逻辑常量：
-   - <span class="arithmatex">\(\hat{v}(\top):=1\)</span>；
-   - <span class="arithmatex">\(\hat{v}(\bot):=0\)</span>.</p>
+<p>对于两个逻辑常量：</p>
+<ul>
+<li><span class="arithmatex">\(\hat{v}(\top):=1\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\bot):=0\)</span>.</li>
+</ul>
 <p><strong>定理2.7（赋值函数与满足关系）</strong> 给定公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span> 和赋值 <span class="arithmatex">\(v\)</span>， <span class="arithmatex">\(v\models\varphi\iff \hat{v}(\varphi)=1\)</span>. </p>
 <p>这意味着除了<strong>定义2.3</strong>，我们还可以选择使用赋值函数定义赋值 <span class="arithmatex">\(v\)</span> 的满足关系。</p>
 <p><strong>定理2.8（局部确定性）</strong> 任给赋值 <span class="arithmatex">\(v_1\)</span> 和 <span class="arithmatex">\(v_2\)</span>，对于任意 <span class="arithmatex">\(p\in\mathrm{Var}(\varphi)\)</span>，若<span class="arithmatex">\(v_1(p)=v_2(p)\)</span>，则 <span class="arithmatex">\(v_1 \models \varphi \iff v_2 \models\varphi\)</span>. 也就是说，公式的真值只依赖于其中出现的原子命题。</p>
@@ -1261,7 +1265,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
