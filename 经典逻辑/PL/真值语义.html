@@ -1,0 +1,1471 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sonriansonjo.github.io/mysite/%E7%BB%8F%E5%85%B8%E9%80%BB%E8%BE%91/PL/%E7%9C%9F%E5%80%BC%E8%AF%AD%E4%B9%89.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logic.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>真值语义 - Sonri an Sonjo在额尼河畔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://tikzjax.com/v1/fonts.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../index.html" title="Sonri an Sonjo在额尼河畔" class="md-header__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sonri an Sonjo在额尼河畔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              真值语义
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="切换至黑夜模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至黑夜模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="切换至白昼模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至白昼模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Prerequisites/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  预备知识
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  经典逻辑
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modal%20logic/%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  模态逻辑
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%AD%96%E7%95%A5%E6%8E%A8%E7%90%86/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  策略推理
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Sonri an Sonjo在额尼河畔" class="md-nav__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
+
+    </a>
+    Sonri an Sonjo在额尼河畔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Prerequisites/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    预备知识
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    预备知识
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Prerequisites/mathematical_method.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Prerequisites/basic_formal_language_and_metalogic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    形式语言与元逻辑基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    经典逻辑
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    经典逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PL.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    经典命题逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模态逻辑
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模态逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal%20logic/%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模态逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal%20logic/%E5%91%BD%E9%A2%98%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命题模态逻辑基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E7%AD%96%E7%95%A5%E6%8E%A8%E7%90%86/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    策略推理
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    策略推理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AD%96%E7%95%A5%E6%8E%A8%E7%90%86/ATL.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交替时态逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        真值函数与语义后承
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        真值表
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="真值表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabular-propositional-logictpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附：表格命题逻辑（Tabular Propositional Logic,TPL）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        赋值博弈
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        克雷格插值
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">真值语义<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="_2">真值函数与语义后承<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p><strong>定义2.1.1（真值集）</strong> 真值集<span class="arithmatex">\(\mathbb{B}=\{0,1\}\)</span>，称 <span class="arithmatex">\(0\)</span> 为假值，<span class="arithmatex">\(1\)</span> 为真值。</p>
+<p><strong>定义2.1.2（赋值）</strong> <span class="arithmatex">\(v:\Phi\to\mathbb{B}\)</span> 是一个赋值，它为每个原子命题指派了一个真假值。</p>
+<ul>
+<li>对于 <span class="arithmatex">\(n\)</span> 个命题变元，共有 <span class="arithmatex">\(2^n\)</span> 种赋值。</li>
+</ul>
+<p><strong>定义2.1.3（真值函数）</strong> 函数 <span class="arithmatex">\(f:\mathbb{B}^n\longrightarrow\mathbb{B}\)</span> 称为n元真值函数。以下是常见真值函数：</p>
+<ul>
+<li><span class="arithmatex">\(f_{\neg}(x)=\begin{cases}1,\quad x=0\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\land}(x,y)=\begin{cases}1,\quad x=y=1\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\lor}(x,y)=\begin{cases}0,\quad x=y=0\\1,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\to}(x,y)=\begin{cases}0,\quad x=1{\rm 并且 }y=0\\1,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\leftrightarrow}(x,y)=\begin{cases}1,\quad x=y\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\mid}(x,y)=\begin{cases}0,\quad x=y=1\\1,\quad{\rm 否则}\end{cases}\)</span></li>
+<li><span class="arithmatex">\(f_{\downarrow}(x,y)=\begin{cases}1,\quad x=y=0\\0,\quad{\rm 否则}\end{cases}\)</span></li>
+</ul>
+<p>以下<strong>真值函数表</strong>罗列了常见真值函数所有输入和对应的输出：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(y\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\neg}(x)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\land}(x,y)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\lor}(x,y)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\to}(x,y)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\leftrightarrow}(x,y)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\mid}(x,y)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(f_{\downarrow}(x,y)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="arithmatex">\(n\)</span> 元真值函数有 <span class="arithmatex">\(2^{2^n}\)</span> 个。</li>
+</ul>
+<p><strong>定义2.1.4（赋值函数）</strong> 给定赋值 <span class="arithmatex">\(v:\Phi\longrightarrow\mathbb{B}\)</span>，赋值函数 <span class="arithmatex">\(\hat{v}:\mathcal{L}_0\longrightarrow\mathbb{B}\)</span> 递归定义如下：</p>
+<ul>
+<li><span class="arithmatex">\(\hat{v}(p):=v(p)\)</span>，其中<span class="arithmatex">\(p\in\Phi\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\neg \varphi):=f_{\neg}[\hat{v}(\varphi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\land\psi):=f_{\land}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\lor\psi):=f_{\lor}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\to\psi):=f_{\to}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\varphi\leftrightarrow\psi):=f_{\leftrightarrow}[\hat{v}(\varphi),\hat{v}(\psi)]\)</span>.</li>
+</ul>
+<p>对于两个逻辑常量：</p>
+<ul>
+<li><span class="arithmatex">\(\hat{v}(\top):=1\)</span>；</li>
+<li><span class="arithmatex">\(\hat{v}(\bot):=0\)</span>.</li>
+</ul>
+<p>由结构归纳法和唯一可读性，$<span class="arithmatex">\(\hat{v}:\mathcal{L}_0​\longrightarrow\mathbb{B}\)</span> 是良定义且唯一的。</p>
+<p><strong>定义2.1.5（满足关系）</strong> 任给赋值 <span class="arithmatex">\(v\)</span> 和公式 <span class="arithmatex">\(\varphi,\psi\in\mathcal{L}_0\)</span>，满足关系 <span class="arithmatex">\(\models\)</span> 定义如下：</p>
+<ul>
+<li><span class="arithmatex">\(v\models p :\iff v(p)=1\text{，其中}p\in\Phi\)</span>；</li>
+<li><span class="arithmatex">\(v\models \neg\varphi :\iff v\not\models\varphi\)</span>；</li>
+<li><span class="arithmatex">\(v\models\varphi\land\psi:\iff v\models\varphi \text{ 并且 } v\models\psi\)</span>；</li>
+<li><span class="arithmatex">\(v\models\varphi\lor\psi:\iff v\models\varphi \text{ 或者 } v\models\psi\)</span>；</li>
+<li><span class="arithmatex">\(v\models\varphi\to\psi:\iff v\not\models\varphi \text{ 或者 } v\models\psi\)</span>；</li>
+<li><span class="arithmatex">\(v\models\varphi\leftrightarrow\psi:\iff v\models\varphi \text{ 当且仅当 } v\models\psi\)</span>.</li>
+</ul>
+<p>关于两个逻辑常量：</p>
+<ul>
+<li><span class="arithmatex">\(v\models \top\)</span>；</li>
+<li><span class="arithmatex">\(v\not\models\bot\)</span>.</li>
+</ul>
+<p>对于公式集 <span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0\)</span>，<span class="arithmatex">\(v\models\Gamma:\iff \text{对于任意 }\varphi\in\Gamma\text{，}v\models\varphi\)</span>.</p>
+<p><strong>定理2.1.6（赋值函数与满足关系）</strong> </p>
+<ul>
+<li>
+<p>给定公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span> 和赋值 <span class="arithmatex">\(v\)</span>， <span class="arithmatex">\(v\models\varphi\iff \hat{v}(\varphi)=1\)</span>. </p>
+</li>
+<li>
+<p>给定公式集 <span class="arithmatex">\(\Gamma =\{\varphi_i\mid i\in[n]\}\subseteq\mathcal{L}_0\)</span> 和赋值 <span class="arithmatex">\(v\)</span>， <span class="arithmatex">\(v\models\Gamma\iff \hat{v}(\varphi_1\land\varphi_2\land\ldots\land\varphi_n)=1\)</span>.</p>
+</li>
+</ul>
+<p>这意味着除了<em>定义2.5</em>，我们还可以选择使用赋值函数定义赋值 <span class="arithmatex">\(v\)</span> 的满足关系。</p>
+<p><strong>定义2.1.7（重言式、可满足式、矛盾式）</strong> </p>
+<ol>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是重言式 <span class="arithmatex">\(:\iff\)</span> 对于任意赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\models\varphi\)</span> .</li>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是矛盾式 <span class="arithmatex">\(:\iff\)</span> 对于任意赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\not\models\varphi\)</span> .</li>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是偶然式 <span class="arithmatex">\(:\iff\)</span> <span class="arithmatex">\(\varphi\)</span> 不是重言式，并且 <span class="arithmatex">\(\varphi\)</span> 不是矛盾式。</li>
+<li>对于任意 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是可满足的 <span class="arithmatex">\(:\iff\)</span> 存在赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\models\varphi\)</span> .</li>
+<li>对于任意 <span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0\)</span>，<span class="arithmatex">\(\Gamma\)</span> 是可满足的 <span class="arithmatex">\(:\iff\)</span> 存在赋值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(v\models\Gamma\)</span> .</li>
+<li>偶然式是可满足的，重言式是可满足的，矛盾式是不可满足的。</li>
+</ol>
+<p>易知 <span class="arithmatex">\(\top\)</span> 是重言式，<span class="arithmatex">\(\bot\)</span> 是矛盾式。</p>
+<ul>
+<li><span class="arithmatex">\(\varphi\)</span> 是重言式 <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(\neg\varphi\)</span> 不可满足 <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(\neg\varphi\)</span> 是矛盾式</li>
+</ul>
+<p><strong>命题2.1.8（常见重言式）</strong> </p>
+<p><strong>定理2.1.9（局部确定性）</strong> 任给赋值 <span class="arithmatex">\(v_1\)</span> 和 <span class="arithmatex">\(v_2\)</span>，对于任意 <span class="arithmatex">\(p\in\mathrm{Var}(\varphi)\)</span>，若<span class="arithmatex">\(v_1(p)=v_2(p)\)</span>，则 <span class="arithmatex">\(v_1 \models \varphi \iff v_2 \models\varphi\)</span>. 也就是说，公式的真值只依赖于其中出现的原子命题。</p>
+<p><strong>定义2.1.10（语义后承）</strong> 对于<span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0,\varphi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\)</span> 是 <span class="arithmatex">\(\Gamma\)</span> 的语义后承，即<span class="arithmatex">\(\Gamma\models\varphi:\iff {\rm 对所有的赋值}v {，若} v\models\Gamma {，则}v\models\varphi\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(\varphi\)</span> 是重言式<span class="arithmatex">\(\iff \emptyset\models\varphi\)</span>.  通常将 <span class="arithmatex">\(\emptyset\models\varphi\)</span> 简记为<span class="arithmatex">\(\models\varphi\)</span>.</li>
+</ul>
+<p><strong>命题 2.1.11（语义后承的基本性质）</strong>
+设 <span class="arithmatex">\(\Gamma,\Delta\subseteq\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi,\psi\in\mathcal{L}_0\)</span>。则有：</p>
+<ol>
+<li>自反性：<span class="arithmatex">\(\Gamma\cup\{\varphi\}\models\varphi\)</span>.</li>
+<li>单调性：若 <span class="arithmatex">\(\Gamma\models\varphi\)</span> 且 <span class="arithmatex">\(\Gamma\subseteq\Delta\)</span>，则 <span class="arithmatex">\(\Delta\models\varphi.\)</span></li>
+<li>传递性（切）：若 <span class="arithmatex">\(\Gamma\models\varphi\)</span> 且 <span class="arithmatex">\(\Gamma\cup\{\varphi\}\models\psi\)</span>，则<span class="arithmatex">\(\Gamma\models\psi.\)</span></li>
+</ol>
+<p><strong>命题2.1.12（语义版本演绎定理）</strong> 任给非空集合 <span class="arithmatex">\(\Gamma\subseteq\mathcal{L}_0, \varphi\in\mathcal{L}_0\)</span> ，</p>
+<div class="arithmatex">\[
+\Gamma\models\varphi \iff\text{ 存在 } \varphi_1,\ldots,\varphi_n\in\Gamma\text{ ,}\models\varphi_1\land\ldots\land\varphi_n\to\varphi.
+\]</div>
+<p>特别地，<span class="arithmatex">\(\{\varphi\}\models\psi\iff\models\varphi\to\psi\)</span>.</p>
+<p><strong>命题2.1.13（否定转化）</strong> <span class="arithmatex">\(\Gamma\models\varphi \iff\Gamma\cup\{\neg\varphi\}\)</span> 不可满足。</p>
+<p>证明：</p>
+<blockquote>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\Gamma\models\varphi\\
+&amp;\iff \text{对于所有赋值 }v\text{，如果 }v\models\Gamma\text{，那么}v\models\varphi\\
+&amp;\iff \text{不存在赋值 }v\text{, }v\models\Gamma\text{ 并且 }v\not\models\varphi\\
+&amp;\iff \text{不存在赋值 }v\text{, }v\models\Gamma\text{ 并且 }v\models\neg\varphi\\
+&amp;\iff \text{不存在赋值 }v\text{, }v\models\Gamma\cup\{\neg\varphi\}\\
+&amp;\iff \Gamma\cup\{\neg\varphi\}\text{ 不可满足}
+\end{aligned}
+\]</div>
+</blockquote>
+<p><strong>定义2.1.14（语义等值）</strong> 对于 <span class="arithmatex">\(\varphi,\psi\in\mathcal{L}_0\)</span>，<span class="arithmatex">\(\varphi\equiv\psi:\iff\{\varphi\}\models\psi\text{ 并且 }\{\psi\}\models\varphi\)</span>，或者等价地，<span class="arithmatex">\(\varphi\equiv\psi:\iff\models\varphi\leftrightarrow\psi\)</span>.</p>
+<p><strong>记号2.1.15（子公式替换）</strong>给定公式 <span class="arithmatex">\(\chi\in\mathcal{L}_0\)</span>，设 <span class="arithmatex">\(\varphi\)</span> 是 <span class="arithmatex">\(\chi\)</span> 的一个指定子公式出现。将 <span class="arithmatex">\(\chi\)</span> 中该处出现的子公式 <span class="arithmatex">\(\varphi\)</span> 全部替换为公式 <span class="arithmatex">\(\psi\)</span>，所得公式记为 <span class="arithmatex">\(\chi[\psi/\varphi].\)</span> 将 <span class="arithmatex">\(\chi\)</span> 中该处出现的子公式 <span class="arithmatex">\(\varphi\)</span> 部分替换为公式 <span class="arithmatex">\(\psi\)</span>，所得公式可记为 <span class="arithmatex">\(\chi[\psi//\varphi].\)</span> </p>
+<p><strong>定理2.1.16（语义版本替换定理）</strong> 设 <span class="arithmatex">\(\varphi,\psi,\chi\in\mathcal{L}_0\)</span>。若 <span class="arithmatex">\(\varphi\equiv\psi\)</span>，则对 <span class="arithmatex">\(\chi\)</span> 中任意指定为 <span class="arithmatex">\(\varphi\)</span> 的子公式出现，都有<span class="arithmatex">\(\chi[\psi//\varphi]\equiv\chi.\)</span> 特别地，<span class="arithmatex">\(\chi[\psi/\varphi]\equiv\chi.\)</span></p>
+<p><strong>定义 2.1.17（真值函数性与布尔联结词）</strong></p>
+<p>任给 <span class="arithmatex">\(n\)</span> 元真值函数 <span class="arithmatex">\(f:\mathbb{B}^n\longrightarrow\mathbb{B}\)</span>，可引入一个对应的 <span class="arithmatex">\(n\)</span> 元联结词符号 <span class="arithmatex">\(c_f\)</span>，该符号可构成公式 <span class="arithmatex">\(c_f(\varphi_1,\ldots,\varphi_n)\)</span> ，其中每个 <span class="arithmatex">\(\varphi_i\)</span> 本身也是由原子命题和联结词递归构成的公式。将公式 <span class="arithmatex">\(c_f(\varphi_1,\ldots,\varphi_n)\)</span> 的语义规定为：</p>
+<div class="arithmatex">\[
+\hat v\bigl(c_f(\varphi_1,\ldots,\varphi_n)\bigr)
+=
+f\bigl(\hat v(\varphi_1),\ldots,\hat v(\varphi_n)\bigr).
+\]</div>
+<p>若一个联结词 <span class="arithmatex">\(c\)</span> 的语义能由某个这样的真值函数 <span class="arithmatex">\(f\)</span> 给出，则称 <span class="arithmatex">\(c\)</span> 具有<strong>真值函数性</strong>，并称 <span class="arithmatex">\(c\)</span> 为<strong>布尔联结词</strong>。任何布尔联结词都具有真值函数性。</p>
+<ul>
+<li>
+<p>根据二元真值函数 <span class="arithmatex">\(f_ \mid\)</span>，我们引入二元布尔联结词 <span class="arithmatex">\(\mid\)</span> ，称为“谢弗尔竖”。</p>
+</li>
+<li>
+<p>根据二元真值函数 <span class="arithmatex">\(f_\downarrow\)</span>，我们引入二元布尔联结词 <span class="arithmatex">\(\downarrow\)</span> ，称为“皮尔士箭头”。</p>
+</li>
+</ul>
+<p><strong>定义2.1.18（公式诱导的真值函数）</strong></p>
+<p>给定一个有 <span class="arithmatex">\(n\)</span> 个原子命题出现的公式 <span class="arithmatex">\(\varphi\)</span> ，不妨设 <span class="arithmatex">\(\mathrm{Var}(\varphi)=\{p_i\mid i\in[n]\}\)</span>，可引入一个 <span class="arithmatex">\(n\)</span> 元真值函数 <span class="arithmatex">\(f_\varphi\)</span>， <span class="arithmatex">\(f_\varphi(x_1,\ldots,x_n)=\hat{v}(\varphi)\)</span>，其中 <span class="arithmatex">\(\hat{v}\)</span> 满足 <span class="arithmatex">\(\hat{v}(p_i)=x_i~(i\in[n])\)</span> . 根据<em>定理2.8</em>，该定义是良定义的。称 <span class="arithmatex">\(f_\varphi\)</span> 为公式 <span class="arithmatex">\(\varphi\)</span> 诱导的真值函数。</p>
+<p><strong>定义2.1.19（联结词的可定义性）</strong> 给定一个对应于真值函数 <span class="arithmatex">\(f\)</span> 的布尔联结词 <span class="arithmatex">\(c_f\)</span> ，和一个（有限或无限的）布尔联结词集 <span class="arithmatex">\(C=\{c_1,c_2,\ldots\}\)</span>。</p>
+<p><span class="arithmatex">\(c_f\)</span> 可由 <span class="arithmatex">\(C\)</span> 定义 <span class="arithmatex">\(:\iff\)</span> 存在一个仅由 <span class="arithmatex">\(C\)</span> 中联结词构成的公式 <span class="arithmatex">\(\varphi\)</span> ，使得 <span class="arithmatex">\(f=f_\varphi\)</span> . </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\{\neg,\land\}\)</span> 可定义 <span class="arithmatex">\(\lor\)</span>，<span class="arithmatex">\(\varphi_1\lor\varphi_2:=\neg(\neg \varphi_1\land\neg \varphi_2)\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\neg,\land\}\)</span> 可定义 <span class="arithmatex">\(\to\)</span>，<span class="arithmatex">\(\varphi_1\to\varphi_2:=\neg( \varphi_1\land\neg \varphi_2)\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\neg,\lor\}\)</span> 可定义 <span class="arithmatex">\(\land\)</span>，<span class="arithmatex">\(\varphi_1\land\varphi_2:=\neg(\neg \varphi_1\lor\neg \varphi_2)\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\neg,\lor\}\)</span> 可定义 <span class="arithmatex">\(\to\)</span>，<span class="arithmatex">\(\varphi_1\to\varphi_2:=\neg\varphi_1\lor\varphi_2\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\neg,\to\}\)</span> 可定义 <span class="arithmatex">\(\land\)</span>，<span class="arithmatex">\(\varphi_1\land\varphi_2:=\neg( \varphi_1\to\neg \varphi_2)\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\to\}\)</span> 可定义 <span class="arithmatex">\(\lor\)</span>，<span class="arithmatex">\(\varphi_1\lor\varphi_2:= (\varphi_1\to \varphi_2)\to \varphi_2\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\to,\bot\}\)</span> 可定义 <span class="arithmatex">\(\neg\)</span>，<span class="arithmatex">\(\neg\varphi:= \varphi\to\bot\)</span> ；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\lor,\leftrightarrow\}\)</span> 可定义 <span class="arithmatex">\(\land\)</span>，<span class="arithmatex">\(\varphi_1\land\varphi_2:=(\varphi_1\lor \varphi_2)\leftrightarrow(\varphi_1\leftrightarrow \varphi_2)\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\neg,\to\}\)</span> 可定义 <span class="arithmatex">\(\mid\)</span> ，<span class="arithmatex">\(\varphi_1\mid\varphi_2:=\varphi_1\to\neg \varphi_2\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\neg,\to\}\)</span> 可定义 <span class="arithmatex">\(\downarrow\)</span>，<span class="arithmatex">\(\varphi_1\downarrow\varphi_2:=\neg(\neg \varphi_1\to\varphi_2)\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\mid\}\)</span> 可定义 <span class="arithmatex">\(\neg\)</span>，<span class="arithmatex">\(\neg\varphi:=\varphi\mid\varphi\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\mid\}\)</span> 可定义 <span class="arithmatex">\(\to\)</span>，<span class="arithmatex">\(\varphi_1\to\varphi_2:=(\varphi_1\mid\varphi_2)\mid\varphi_1\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\downarrow\}\)</span> 可定义 <span class="arithmatex">\(\neg\)</span>，<span class="arithmatex">\(\neg\varphi:=\varphi\downarrow\varphi\)</span>；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\downarrow\}\)</span> 可定义 <span class="arithmatex">\(\to\)</span>，<span class="arithmatex">\(\varphi_1\to\varphi_2:=\bigl((\varphi_1\downarrow\varphi_1)\downarrow\varphi_2\bigr)\downarrow\bigl((\varphi_1\downarrow\varphi_1)\downarrow\varphi_2\bigr)\)</span>.</p>
+</li>
+</ul>
+<p><strong>定义2.1.20（合取范式，CNF）</strong> 命题逻辑的合取范式由以下巴科斯-诺尔范式生成：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\varphi::=&amp;\  C\mid C\land \varphi\\
+C::=&amp;\  L\mid L\lor C\\
+L::=&amp;\  p\mid\neg p
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(p\in\Phi\)</span>.  <span class="arithmatex">\(\varphi\)</span> 是合取范式，<span class="arithmatex">\(C\)</span> 称为析取子式，<span class="arithmatex">\(L\)</span> 称为文字。</p>
+<p><strong>定义2.1.21（析取范式，DNF）</strong> 命题逻辑的析取范式由以下巴科斯-诺尔范式生成：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\varphi::=&amp;\  C\mid C\lor \varphi\\
+C::=&amp;\  L\mid L\land C\\
+L::=&amp;\  p\mid\neg p
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(p\in\Phi\)</span>.  <span class="arithmatex">\(\varphi\)</span> 是析取范式，<span class="arithmatex">\(C\)</span> 称为合取子式，<span class="arithmatex">\(L\)</span> 称为文字。</p>
+<p><strong>定义2.1.22（否定范式，NNF）</strong> 命题逻辑的否定范式由以下巴科斯-诺尔范式生成：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\varphi::=&amp;\  L\mid L\lor \varphi\mid L\lor\varphi\\
+L::=&amp;\  p\mid\neg p
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(p\in\Phi\)</span>.  <span class="arithmatex">\(\varphi\)</span> 是否定范式，<span class="arithmatex">\(L\)</span> 称为文字。</p>
+<p><strong>注记2.1.23（等值演算法构造合取/析取范式）</strong> 任给公式 <span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>。若要把 <span class="arithmatex">\(\varphi\)</span> 化为合取范式或析取范式，可反复使用<strong>语义等值</strong>和<strong>替换定理</strong>，把 <span class="arithmatex">\(\varphi\)</span> 逐步替换为语义等值的公式。常用等值式使用次序为：</p>
+<ol>
+<li>
+<p>消去蕴含和等价（直至公式不含 <span class="arithmatex">\(\to\)</span> 和 <span class="arithmatex">\(\leftrightarrow\)</span> ）：</p>
+<div class="arithmatex">\[
+   \varphi\to\psi\equiv\neg\varphi\lor\psi,\quad
+   \varphi\leftrightarrow\psi\equiv(\neg\varphi\lor\psi)\land(\varphi\lor\neg\psi)
+\]</div>
+</li>
+<li>
+<p>否定内移（直至公式是否定范式）：</p>
+<div class="arithmatex">\[
+   \neg\neg\varphi\equiv\varphi,\quad\neg(\varphi\land\psi)\equiv\neg\varphi\lor\neg\psi,\quad\neg(\varphi\lor\psi)\equiv\neg\varphi\land\neg\psi
+\]</div>
+</li>
+<li>
+<p>分配（直至公式是合取/析取范式）：</p>
+<div class="arithmatex">\[
+   \varphi\land(\psi\lor\chi)\equiv(\varphi\land\psi)\lor(\varphi\land\chi),\varphi\lor(\psi\land\chi)\equiv(\varphi\lor\psi)\land(\varphi\lor\chi)
+\]</div>
+</li>
+</ol>
+<p>由于每一步都是语义等值替换，最终所得公式与原公式语义等值。</p>
+<p><strong>注记2.1.23（原子公式赋值法构造范式）</strong> 任给公式 <span class="arithmatex">\(\varphi\)</span>，设 <span class="arithmatex">\(\mathrm{Var}(\varphi)=\{p_1,\ldots,p_m\}\)</span>。对每个赋值 <span class="arithmatex">\(v_j\)</span>，其中 <span class="arithmatex">\(j\in[2^m]\)</span>：</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(\hat{v}_j(\varphi)=1\)</span>，对每个 <span class="arithmatex">\(i\in[m]\)</span> 取文字</p>
+<div class="arithmatex">\[
+  L_i^j:=
+  \begin{cases}
+  p_i, &amp; v_j(p_i)=1,\\
+  \neg p_i, &amp; v_j(p_i)=0,
+  \end{cases}
+\]</div>
+</li>
+</ul>
+<p>称 <span class="arithmatex">\(\bigwedge_{i=1}^m L_i^j\)</span> 为一个极小项。将所有使 <span class="arithmatex">\(\varphi\)</span> 为 <span class="arithmatex">\(1\)</span> 的极小项取析取，得到 <span class="arithmatex">\(\varphi\)</span> 的析取范式，称为 <span class="arithmatex">\(\varphi\)</span> 的<strong>主析取范式</strong>。</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(\hat{v}_j(\varphi)=0\)</span>，对每个 <span class="arithmatex">\(i\in[m]\)</span> 取文字</p>
+<div class="arithmatex">\[
+  L_i^j:=
+  \begin{cases}
+  \neg p_i, &amp; v_j(p_i)=1,\\
+  p_i, &amp; v_j(p_i)=0,
+  \end{cases}
+\]</div>
+</li>
+</ul>
+<p>称 <span class="arithmatex">\(\bigvee_{i=1}^m L_i^j\)</span> 为一个极大项。将所有使 <span class="arithmatex">\(\varphi\)</span> 为 <span class="arithmatex">\(0\)</span> 的极大项取合取，得到 <span class="arithmatex">\(\varphi\)</span> 的合取范式，称为 <span class="arithmatex">\(\varphi\)</span> 的<strong>主合取范式</strong>。</p>
+<p>特别地，若 <span class="arithmatex">\(\varphi\)</span> 是矛盾式，则所有赋值下 <span class="arithmatex">\(\hat{v}_j(\varphi)=0\)</span>，其主析取范式为空析取，记为 <span class="arithmatex">\(\bot\)</span>；若 <span class="arithmatex">\(\varphi\)</span> 是重言式，则所有赋值下 <span class="arithmatex">\(\hat{v}_j(\varphi)=1\)</span>，其主合取范式为空合取，记为 <span class="arithmatex">\(\top\)</span>。依此法所得公式与原公式语义等值。</p>
+<p><strong>定义2.1.23（功能完全集）</strong>若布尔联结词集 <span class="arithmatex">\(C\)</span> 可定义所有非零元真值函数对应的布尔联结词，则称布尔联结词集 <span class="arithmatex">\(C\)</span> 是<strong>功能完全集</strong>。</p>
+<ul>
+<li>
+<p>由合取范式和析取范式的构造及等值性，<span class="arithmatex">\(\{\neg,\land,\lor\}\)</span> 是功能完全集。</p>
+</li>
+<li>
+<p>由联结词的可定义性，<span class="arithmatex">\(\{\neg,\land\}\)</span> 、<span class="arithmatex">\(\{\neg,\lor\}\)</span> 、<span class="arithmatex">\(\{\neg,\to\}\)</span> 、<span class="arithmatex">\(\{\to,\bot\}\)</span> 、<span class="arithmatex">\(\{\neg,\land\}\)</span> 、<span class="arithmatex">\(\{\mid\}\)</span> 、<span class="arithmatex">\(\{\downarrow\}\)</span> 是功能完全集。</p>
+</li>
+</ul>
+<h2 id="_3">真值表<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<p><strong>定义2.2.1（真值表）</strong> 任给公式 <span class="arithmatex">\(\varphi\)</span>，设 <span class="arithmatex">\(m:=|\mathrm{Var}(\varphi)|\)</span>、<span class="arithmatex">\(n:=|\mathrm{Sub}(\varphi)|\)</span> ，子公式根据 <em>定义1.8</em> 的一个按顺序排列 <span class="arithmatex">\((\psi_1,\ldots,\psi_n)\)</span> 。</p>
+<p><span class="arithmatex">\(\varphi\)</span> 的真值表 <span class="arithmatex">\(T_\varphi: [n]\times(\{0\}\cup[2^m])\longrightarrow\mathrm{Sub}(\varphi)\cup\mathbb{B}\)</span> ，满足：</p>
+<ul>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\)</span>，<span class="arithmatex">\(T_\varphi(i,0):=\psi_i\)</span>；</p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(i\in[m],\text{ }j\in[2^m]\)</span>，<span class="arithmatex">\(T_\varphi(i,j):=\begin{cases}1,\quad \big\lfloor\frac{j-1}{2^{m-i}}\big\rfloor\text{是偶数}\\0,\quad\text{否则}\end{cases}\)</span>，令赋值<span class="arithmatex">\(v:\mathrm{Var}(\varphi)\longrightarrow\mathbb{B}\)</span> 满足 <span class="arithmatex">\(v_j(\psi_i)=T_\varphi(i,j)\)</span>；</p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\setminus[m],\text{ }j\in[2^m]\)</span>，<span class="arithmatex">\(T_\varphi(i,j):=\hat{v}_j(\psi_i)\)</span>，其中 <span class="arithmatex">\(\hat{v}_j\)</span> 是 <span class="arithmatex">\(v\)</span> 根据 <em>定义2.4</em> 递归定义得到。</p>
+</li>
+</ul>
+<p><strong>命题2.2.2（使用真值表判断重言式、可满足式、矛盾式）</strong> </p>
+<p>任给公式 <span class="arithmatex">\(\varphi\)</span>，设 <span class="arithmatex">\(m:=|\mathrm{Var}(\varphi)|\)</span>、<span class="arithmatex">\(n:=|\mathrm{Sub}(\varphi)|\)</span> ，<span class="arithmatex">\(T_\varphi\)</span> 是 <span class="arithmatex">\(\varphi\)</span> 的真值表：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\varphi\)</span> 是重言式 <span class="arithmatex">\(\iff\)</span> 对于任意 <span class="arithmatex">\(j\in[2^m]\)</span>， <span class="arithmatex">\(T_\varphi(n,j)=1\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\varphi\)</span> 是可满足的 <span class="arithmatex">\(\iff\)</span> 存在 <span class="arithmatex">\(j\in[2^m]\)</span>， <span class="arithmatex">\(T_\varphi(n,j)=1\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\varphi\)</span> 是矛盾式 <span class="arithmatex">\(\iff\)</span> 对于任意 <span class="arithmatex">\(j\in[2^m]\)</span>， <span class="arithmatex">\(T_\varphi(n,j)=0\)</span>.</p>
+</li>
+</ul>
+<p><strong>定义2.2.3（多真值表合并表）</strong> 设有限非空的公式集 <span class="arithmatex">\(\Gamma=\{\varphi_1,\ldots,\varphi_k\}\subseteq\mathcal{L}_0\)</span> 。</p>
+<p>令公共变元集 <span class="arithmatex">\(V:=\bigcup_{i=1}^k\mathrm{Var}(\varphi_i),\ m:=|V|\)</span>. 取 <span class="arithmatex">\(V\)</span> 的一个枚举 <span class="arithmatex">\((p_1,\ldots,p_m)\)</span>。</p>
+<p>令非变元子公式集 <span class="arithmatex">\(W:=\Bigl(\bigcup_{i=1}^k\mathrm{Sub}(\varphi_i)\Bigr)\setminus V，\ r:=|W|\)</span>.</p>
+<p>有限集 <span class="arithmatex">\(W\)</span> 可线性排列为 <span class="arithmatex">\((\chi_1,\ldots,\chi_r)\)</span>，满足：</p>
+<ul>
+<li>
+<p>对每个 <span class="arithmatex">\(i\in[r]\)</span>， <span class="arithmatex">\(\chi_i\in W\)</span> ；</p>
+</li>
+<li>
+<p>对任意<span class="arithmatex">\(\chi\in W\)</span> ，存在唯一的 <span class="arithmatex">\(i\in[r]\)</span> ，使得 <span class="arithmatex">\(\chi=\chi_i\)</span>​；</p>
+</li>
+<li>
+<p>对任意 <span class="arithmatex">\(i,j\in[r]\)</span> ，若 <span class="arithmatex">\(\chi_i\in\mathrm{Sub}^-(\chi_j)\)</span>​ ，则 <span class="arithmatex">\(i&lt;j\)</span>.</p>
+</li>
+</ul>
+<p>令 <span class="arithmatex">\(n:=m+r\)</span>，合并表行序列 <span class="arithmatex">\((\psi_1,\ldots,\psi_n):=(p_1,\ldots,p_m,\chi_1,\ldots,\chi_r)\)</span></p>
+<p>对每个 <span class="arithmatex">\(s\in[k]\)</span>，设<span class="arithmatex">\(m_s:=|\mathrm{Var}(\varphi_s)|,\  n_s:=|\mathrm{Sub}(\varphi_s)|\)</span>. 并按 <em>定义1.8</em> 把 <span class="arithmatex">\(\varphi_s\)</span> 的子公式排列为 <span class="arithmatex">\((\psi_{s,1},\ldots,\psi_{s,n_s})\)</span>. <span class="arithmatex">\(T_{\varphi_s}\)</span> 是 <span class="arithmatex">\(\varphi_s\)</span> 的真值表。对于子序列 <span class="arithmatex">\((\psi_{s,1},\ldots,\psi_{s,m_s})\)</span>，由 <em>定义1.8</em> 知它是 <span class="arithmatex">\(\mathrm{Var}(\varphi_s)\)</span> 的一个枚举。由于<span class="arithmatex">\(\mathrm{Var}(\varphi_s)\in V\)</span> ，因此对每个 <span class="arithmatex">\(t\in[m_s]\)</span>，存在唯一 <span class="arithmatex">\(i\in[m]\)</span> 使得 <span class="arithmatex">\(\psi_{s,t}=\psi_i\)</span>，记 <span class="arithmatex">\(\mathrm{N}(\varphi_{s,t}):=i\)</span>.</p>
+<p><span class="arithmatex">\(\Gamma\)</span> 的真值表合并表 <span class="arithmatex">\(T_\Gamma:[n]\times(\{0\}\cup[2^m])\longrightarrow V\cup W\cup\mathbb{B}\)</span>，满足：</p>
+<ul>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\)</span>，<span class="arithmatex">\(T_\Gamma(i,0):=\psi_i\)</span>.</p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(i\in[m]\)</span>，<span class="arithmatex">\(j\in[2^m]\)</span>，<span class="arithmatex">\(T_\Gamma(i,j):=\begin{cases}1,\quad \big\lfloor\frac{j-1}{2^{m-i}}\big\rfloor\text{是偶数},\\ 0,\quad  \text{否则}.\end{cases}\)</span></p>
+</li>
+</ul>
+<p>令赋值<span class="arithmatex">\(v:\mathrm{Var}(\varphi)\longrightarrow\mathbb{B}\)</span> 满足 <span class="arithmatex">\(v_j(p_i)=T_\Gamma(i,j)\)</span>。</p>
+<ul>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\setminus[m]\)</span>，即 <span class="arithmatex">\(\psi_i\in W\)</span>，任取 <span class="arithmatex">\(\varphi_s\in\Gamma\)</span> 使得 <span class="arithmatex">\(\psi_i\in\mathrm{Sub}(\varphi_s)\)</span>. 取 <span class="arithmatex">\(i_s\in[n_s]\)</span> 满足 <span class="arithmatex">\(T_{\varphi_s}(i_s,0)=\psi_i\)</span>. 对每个 <span class="arithmatex">\(j\in[2^m]\)</span>，存在唯一的 <span class="arithmatex">\(j_s\in[2^{m_s}]\)</span>，使得：</p>
+<div class="arithmatex">\[
+  (T_{\varphi_s}(1,j_s),\ldots,T_{\varphi_s}(m_s,j_s))=(T_\Gamma(\mathrm{N}(\varphi_{s,1}),j),\ldots,T_\Gamma(\mathrm{N}(\varphi_{s,m_s}),j))
+\]</div>
+</li>
+</ul>
+<p>定义 <span class="arithmatex">\(T_\Gamma(i,j):=T_{\varphi_s}(i_s,j_s)\)</span>.</p>
+<p><strong>命题2.2.4（使用真值表判断语义后承）</strong> </p>
+<p><strong>命题2.2.5（使用真值表判断语义等值）</strong> </p>
+<h3 id="tabular-propositional-logictpl">附：表格命题逻辑（Tabular Propositional Logic,TPL）<a class="headerlink" href="#tabular-propositional-logictpl" title="Permanent link">⚓︎</a></h3>
+<blockquote>
+<p>参见 HAZE T G. <a href="https://philpapers.org/archive/HAZTTT.pdf#1#4#1">The truth table formulation of propositional logic</a>[J]. Teorema: International Journal of Philosophy, 2023, 42(1): 123-147.</p>
+</blockquote>
+<p><strong>定义2.2.6（TPL 的符号）</strong> 表格命题逻辑 TPL 使用如下符号：</p>
+<ul>
+<li>原子：<span class="arithmatex">\(a,b,\ldots,z,a_1,b_1,\ldots\)</span>，原子集记作 <span class="arithmatex">\(\Phi\)</span>；</li>
+<li>值符号：<span class="arithmatex">\(\mathrm T,\mathrm F\)</span>；</li>
+<li>止符：<span class="arithmatex">\(\bullet\)</span>。</li>
+</ul>
+<p>与命题逻辑 <span class="arithmatex">\(\mathcal L_0\)</span> 不同，TPL 的原子本身不是合式公式，也不直接在模型下取真值；它们只表示“某个条件是否成立”。止符放在通常写真值表时公式所在的位置，起占位作用。</p>
+<p><strong>定义2.2.7（TPL 合式公式）</strong> 设 <span class="arithmatex">\(n\ge1\)</span>，<span class="arithmatex">\(p_1,\ldots,p_n\in\Phi\)</span> 互不相同。一个 TPL 合式公式是 <span class="arithmatex">\((2^n+1)\times(n+1)\)</span> 的二维阵列 <span class="arithmatex">\(\alpha\)</span>，满足：</p>
+<ol>
+<li>顶行为 <span class="arithmatex">\(p_1\ \ p_2\ \ \cdots\ \ p_n\ \ \bullet\)</span>；</li>
+<li>对每个 <span class="arithmatex">\(i\in[n]\)</span>，第 <span class="arithmatex">\(i\)</span> 列第 <span class="arithmatex">\(1\)</span> 个元素为 <span class="arithmatex">\(p_i\)</span>，第 <span class="arithmatex">\(2\)</span> 至第 <span class="arithmatex">\(2^n+1\)</span> 个元素构成由 <span class="arithmatex">\(2^i\)</span> 段交替的 <span class="arithmatex">\(\mathrm T,\mathrm F\)</span> 序列，每段长度为 <span class="arithmatex">\(2^n/2^i\)</span>；</li>
+<li>最右列第 <span class="arithmatex">\(1\)</span> 个元素为 <span class="arithmatex">\(\bullet\)</span>，第 <span class="arithmatex">\(2\)</span> 至第 <span class="arithmatex">\(2^n+1\)</span> 个元素均为 <span class="arithmatex">\(\mathrm T\)</span> 或 <span class="arithmatex">\(\mathrm F\)</span>。</li>
+</ol>
+<p>称第 <span class="arithmatex">\(1\)</span> 行为 <span class="arithmatex">\(\alpha\)</span> 的顶行，并记 <span class="arithmatex">\(\alpha\)</span> 中原子集为 <span class="arithmatex">\(\mathrm{Var}(\alpha)\)</span>。例如，与 <span class="arithmatex">\(\mathcal{L}_0\)</span> 中公式 <span class="arithmatex">\((p\to q)\)</span> 对应的 TPL 合式公式为：</p>
+<div class="arithmatex">\[
+\begin{array}{ccc}
+p &amp; q &amp; \bullet\\\hline
+\mathrm T &amp; \mathrm T &amp; \mathrm T\\
+\mathrm T &amp; \mathrm F &amp; \mathrm F\\
+\mathrm F &amp; \mathrm T &amp; \mathrm T\\
+\mathrm F &amp; \mathrm F &amp; \mathrm T
+\end{array}
+\]</div>
+<p><strong>定义2.2.8（否定）</strong> 设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式。将 <span class="arithmatex">\(\alpha\)</span> 最右列第 <span class="arithmatex">\(2\)</span> 至第 <span class="arithmatex">\(2^n+1\)</span> 个元素中的所有 <span class="arithmatex">\(\mathrm T\)</span> 改为 <span class="arithmatex">\(\mathrm F\)</span>、所有 <span class="arithmatex">\(\mathrm F\)</span> 改为 <span class="arithmatex">\(\mathrm T\)</span>，所得合式公式称为 <span class="arithmatex">\(\alpha\)</span> 的否定。</p>
+<p><strong>定义2.2.9（模型与真值）</strong> TPL 的模型为赋值</p>
+<div class="arithmatex">\[
+v:\Phi\longrightarrow\mathbb B.
+\]</div>
+<p>设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，顶行原子为 <span class="arithmatex">\(p_1,\ldots,p_n\)</span>。若 <span class="arithmatex">\(\alpha\)</span> 的某赋值行 <span class="arithmatex">\(R\)</span> 满足：对每个 <span class="arithmatex">\(i\in[n]\)</span>，<span class="arithmatex">\(R\)</span> 在 <span class="arithmatex">\(p_i\)</span> 下为 <span class="arithmatex">\(\mathrm T\)</span> 当且仅当 <span class="arithmatex">\(v(p_i)=1\)</span>，则称 <span class="arithmatex">\(R\)</span> 为 <span class="arithmatex">\(\alpha\)</span> 的 <span class="arithmatex">\(v\)</span>-对应行。由顶行原子互异，<span class="arithmatex">\(v\)</span>-对应行唯一。规定</p>
+<div class="arithmatex">\[
+v\models\alpha:\iff \alpha\text{ 的 }v\text{-对应行的最右元素为 }\mathrm T.
+\]</div>
+<p>重言式、可满足式、矛盾式、偶然式、公式集可满足性与语义后承，均按讲义已有定义理解。</p>
+<p><strong>命题2.2.10（单公式自判定）</strong> 设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，<span class="arithmatex">\(C=(c_1,\ldots,c_{2^n})\)</span> 为 <span class="arithmatex">\(\alpha\)</span> 最右列第 <span class="arithmatex">\(2\)</span> 至第 <span class="arithmatex">\(2^n+1\)</span> 个元素按行从上到下排成的序列。则：</p>
+<ol>
+<li><span class="arithmatex">\(\alpha\)</span> 是重言式 <span class="arithmatex">\(\iff\)</span> 对于任意<span class="arithmatex">\(c_i\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm T\)</span>；</li>
+<li><span class="arithmatex">\(\alpha\)</span> 是可满足式 <span class="arithmatex">\(\iff\)</span> 存在<span class="arithmatex">\(c_i\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm T\)</span>；</li>
+<li><span class="arithmatex">\(\alpha\)</span> 是矛盾式 <span class="arithmatex">\(\iff\)</span> 对于任意<span class="arithmatex">\(c_i\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm F\)</span>；</li>
+<li><span class="arithmatex">\(\alpha\)</span> 是偶然式 <span class="arithmatex">\(\iff\)</span> 存在<span class="arithmatex">\(c_i,c_j\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm T\)</span> 且 <span class="arithmatex">\(c_j=\mathrm F\)</span>.</li>
+</ol>
+<p><strong>定义2.2.11（顶行相同）</strong> 称一组 TPL 合式公式顶行相同，若它们的顶行完全相同，即原子相同、次序相同且止符位置相同。</p>
+<p><strong>命题2.2.12（顶行相同的联合判定）</strong> 设 <span class="arithmatex">\(\Gamma=\{\alpha_1,\ldots,\alpha_k\}\)</span> 是有限个顶行相同的 TPL 公式，<span class="arithmatex">\(C_i\)</span> 为 <span class="arithmatex">\(\alpha_i\)</span> 的右列序列，其第 <span class="arithmatex">\(j\)</span> 个元素记作 <span class="arithmatex">\(C_i(j)\)</span>。则 <span class="arithmatex">\(\Gamma\)</span> 联合可满足，当且仅当存在 <span class="arithmatex">\(j\in[2^n]\)</span>，使得对所有 <span class="arithmatex">\(i\in[k]\)</span> 都有 <span class="arithmatex">\(C_i(j)=\mathrm T\)</span>。</p>
+<p><strong>定义2.2.13（冗余原子）</strong> 以下讨论扩展时，约定所涉 TPL 合式公式的顶行按字母序排列。设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，<span class="arithmatex">\(q\in\mathrm{Var}(\alpha)\)</span>。称 <span class="arithmatex">\(q\)</span> 在 <span class="arithmatex">\(\alpha\)</span> 中冗余，若对 <span class="arithmatex">\(\alpha\)</span> 的任意两个赋值行 <span class="arithmatex">\(R,R'\)</span>，只要 <span class="arithmatex">\(R\)</span> 与 <span class="arithmatex">\(R'\)</span> 在除 <span class="arithmatex">\(q\)</span> 外的每个顶行原子下值符号相同，就有 <span class="arithmatex">\(R\)</span> 与 <span class="arithmatex">\(R'\)</span> 的最右元素相同。</p>
+<p><strong>定义2.2.15（扩展）</strong> 设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，顶行按字母序排列。设 <span class="arithmatex">\(V\)</span> 是有限原子集，<span class="arithmatex">\(V\supseteq\mathrm{Var}(\alpha)\)</span>，按字母序枚举为 <span class="arithmatex">\(q_1,\ldots,q_m\)</span>。<span class="arithmatex">\(\alpha\)</span> 关于 <span class="arithmatex">\(V\)</span> 的扩展 <span class="arithmatex">\(\alpha^V\)</span> 是如下 TPL 合式公式：</p>
+<ol>
+<li>顶行为 <span class="arithmatex">\(q_1\ \ \cdots\ \ q_m\ \ \bullet\)</span>；</li>
+<li>对 <span class="arithmatex">\(V\)</span> 的每个赋值行 <span class="arithmatex">\(S\)</span>，令 <span class="arithmatex">\(R\)</span> 为 <span class="arithmatex">\(S\)</span> 限制到 <span class="arithmatex">\(\mathrm{Var}(\alpha)\)</span> 后得到的 <span class="arithmatex">\(\alpha\)</span> 的赋值行；<span class="arithmatex">\(\alpha^V\)</span> 在 <span class="arithmatex">\(S\)</span> 的右列元素定义为 <span class="arithmatex">\(\alpha\)</span> 在 <span class="arithmatex">\(R\)</span> 的右列元素。</li>
+</ol>
+<p><strong>命题2.2.16（扩展保持联合可满足性）</strong> 设 <span class="arithmatex">\(\Gamma=\{\alpha_1,\ldots,\alpha_k\}\)</span> 是有限 TPL 公式组，<span class="arithmatex">\(V=\bigcup_{i=1}^k\mathrm{Var}(\alpha_i)\)</span>，<span class="arithmatex">\(\Gamma^V=\{\alpha_1^V,\ldots,\alpha_k^V\}\)</span>。则 <span class="arithmatex">\(\Gamma\text{ 联合可满足}\iff\Gamma^V\text{ 联合可满足}.\)</span></p>
+<h2 id="_4">赋值博弈<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<p><strong>定义2.3.1（命题逻辑赋值博弈）</strong> 给定赋值 <span class="arithmatex">\(v:\Phi\to\mathbb B\)</span>，和公式<span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>. 赋值博弈 <span class="arithmatex">\(G(v,\varphi)\)</span> 的两名玩家<span class="arithmatex">\(\{\mathbf P,\mathbf O\}\)</span>和初始角色<span class="arithmatex">\(\{\text{证实者}，\text{证伪者}\}\)</span>约定如下：</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf P\)</span>，初始角色为“证实者”；</li>
+<li><span class="arithmatex">\(\mathbf O\)</span>，初始角色为“证伪者”。</li>
+</ul>
+<p>博弈的状态是一个尚未被消去的公式。初始状态为 <span class="arithmatex">\(\varphi\)</span>，轮到 <span class="arithmatex">\(\mathbf P\)</span> 行动。规则如下：</p>
+<ol>
+<li>若当前公式是原子 <span class="arithmatex">\(p\)</span>，博弈终止：若 <span class="arithmatex">\(v(p)=1\)</span>，则当前角色为“支持”的一方获胜；若 <span class="arithmatex">\(v(p)=0\)</span>，则当前角色为“反对”的一方获胜。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\lor\chi\)</span>，由当前角色为“支持”的一方选择 <span class="arithmatex">\(\psi\)</span> 或 <span class="arithmatex">\(\chi\)</span> 继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\land\chi\)</span>，由当前角色为“反对”的一方选择 <span class="arithmatex">\(\psi\)</span> 或 <span class="arithmatex">\(\chi\)</span> 继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\neg\psi\)</span>，则两名玩家交换角色，从 <span class="arithmatex">\(\psi\)</span> 继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\to\chi\)</span>，将其视为 <span class="arithmatex">\(\neg\psi\lor\chi\)</span> 并按上述规则继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\leftrightarrow\chi\)</span>，将其视为 <span class="arithmatex">\((\psi\land\chi)\lor(\neg\psi\land\neg\chi)\)</span> 并按上述规则继续。</li>
+</ol>
+<p>由于公式有穷，且每一步都消去一个联结词，博弈必在有限步内终止。</p>
+<p><strong>定义2.3.2（获胜策略与博弈论真值）</strong> 玩家 <span class="arithmatex">\(\mathbf P\)</span> 在 <span class="arithmatex">\(G(v,\varphi)\)</span> 中的策略，是一个从“轮到 <span class="arithmatex">\(\mathbf P\)</span> 行动的状态”到合法行动的函数。称策略 <span class="arithmatex">\(\sigma\)</span> 是获胜策略，当且仅当 <span class="arithmatex">\(\mathbf P\)</span> 按照 <span class="arithmatex">\(\sigma\)</span> 行动时，对于 <span class="arithmatex">\(\mathbf O\)</span> 的任何行动，最终到达的原子状态都使 <span class="arithmatex">\(\mathbf P\)</span> 获胜。类似地定义 <span class="arithmatex">\(\mathbf O\)</span> 的获胜策略。</p>
+<div class="arithmatex">\[
+v\models_{\mathrm G}\varphi:\iff \mathbf P\text{ 在 }G(v,\varphi)\text{ 中有获胜策略}.
+\]</div>
+<h2 id="_5">克雷格插值<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+      
+    
+  </body>
+</html>
