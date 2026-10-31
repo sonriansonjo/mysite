@@ -36,18 +36,22 @@ nav:
   - 首页: index.md 
   - 预备知识: 
     - Prerequisites/index.md
-    - 素朴集合论1: Prerequisites/naive_set_theory_1.md   
+#    - 素朴集合论1: Prerequisites/naive_set_theory_1.md   
     - 数学方法: Prerequisites/mathematical_method.md
     - 形式语言与元逻辑基础: Prerequisites/basic_formal_language_and_metalogic.md
-  - 数理逻辑:
-    - mathematical logic/index.md
-    - 命题逻辑: mathematical logic/propositional_logic.md
-  - 交替时态逻辑: 
-    - ATL/index.md
-    - 语法和语义: ATL/syntax_and_semantics.md
+  - 经典逻辑:
+    - 经典逻辑/index.md
+    - 经典命题逻辑: 经典逻辑/PL.md
+  - 模态逻辑:
+    - modal logic/模态逻辑.md
+    - 命题模态逻辑基础: modal logic/命题模态逻辑基础.md
+  - 策略推理: 
+    - 策略推理/index.md
+    - 交替时态逻辑: 策略推理/ATL.md
 plugins:
   - search
   - offline
+  - include-markdown
 markdown_extensions:
   - def_list                      # 定义列表语法
   - toc:
@@ -63,6 +67,9 @@ markdown_extensions:
       generic: true
   - markdown_checklist.extension
   - footnotes
+extra_css:
+  - https://tikzjax.com/v1/fonts.css
 extra_javascript:
   - javascripts/mathjax.js 
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://tikzjax.com/v1/tikzjax.js

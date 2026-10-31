@@ -1,4 +1,4 @@
-# 语法和语义
+# 交替时态逻辑
 
 [TOC]
 
@@ -41,6 +41,7 @@ $$
 \varphi_1\land\varphi_2\equiv&\neg(\neg\varphi_1\lor\neg\varphi_2)\\\varphi_1\to\varphi_2\equiv& \neg\varphi_1\lor\varphi_2\\\varphi_1\leftrightarrow\varphi_2\equiv& (\varphi_1\to\varphi_2)\land(\varphi_2\to\varphi_1)\\\top\equiv&\varphi\lor\neg\varphi\\\bot\equiv&\neg\top\\\langle\!\langle A\rangle\!\rangle\Diamond\varphi\equiv&\langle\!\langle A\rangle\!\rangle\top\mathcal{U}\varphi\
 \end{align*}
 $$
+
 ## 语义
 
 **定义1.3（ATL语义）** &ensp;ATL的语义定义在CGS $\mathcal{S}$上，$\mathcal{S},q\models\varphi$表明结构$\mathcal{S}$上的状态$q$满足状态公式$\varphi$，令函数$[n]=\{0,1,\ldots,n-1\}$（$n\in\mathbb{N}$），满足关系$\models$定义如下：
