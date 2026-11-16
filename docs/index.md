@@ -3,6 +3,7 @@
 ✨你好呀！欢迎来到 **$\mathbb{Sonri}$ $\mathbb{an}$ $\mathbb{Sonjo}$** 的个人网站，一个由**微笑**和**梦境**编织的数字花园~~
 
 ---
+
 🎐我的名字 **$\mathcal{Sonri}$ $\mathcal{an}$ $\mathcal{Sonjo}$** 取自微语（mini language）词汇——
 
 **$\mathscr{Sonri}$**
@@ -24,13 +25,16 @@
 
 我正在学习现代逻辑，这里会适时整理并更新我的学习笔记，近期计划涵盖主题包括：
 
+- 形式科学方法（Methodology of Formal Sciences）
 - 素朴集合论（Naive Set Theory）
 - 命题逻辑（Propositional Logic）
 - 一阶逻辑（First-order Logic）
 - 命题模态逻辑（Modal Logic）
 - 交替时态逻辑（Alternating-time Temporal Logic）
+- 计算理论（Computation Theory）
 
 \-------------------------------------------
+
 > 身在宇宙一隅，也有繁星作伴。
 
 > 建站时间：2026/9/9 22:26(GMT+8:00)
