@@ -1,0 +1,1400 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sonriansonjo.github.io/mysite/%E7%BB%8F%E5%85%B8%E9%80%BB%E8%BE%91/PL/%E7%9C%9F%E5%80%BC%E8%A1%A8%E3%80%81%E8%B5%8B%E5%80%BC%E5%8D%9A%E5%BC%88%E4%B8%8E%E6%8F%92%E5%80%BC.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logic.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>真值表、赋值博弈与插值 - Sonri an Sonjo在额尼河畔</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://tikzjax.com/v1/fonts.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../index.html" title="Sonri an Sonjo在额尼河畔" class="md-header__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sonri an Sonjo在额尼河畔
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              真值表、赋值博弈与插值
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="切换至黑夜模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至黑夜模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="切换至白昼模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至白昼模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%BD%A2%E5%BC%8F%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95%E8%AE%BA/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  形式科学方法论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E9%9B%86%E5%90%88%E8%AE%BA/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  集合论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  经典逻辑
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  模态逻辑
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%AD%96%E7%95%A5%E6%8E%A8%E7%90%86/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  策略推理
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Sonri an Sonjo在额尼河畔" class="md-nav__button md-logo" aria-label="Sonri an Sonjo在额尼河畔" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.04 13.13c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17m-1.97 1.75 2.05 2.05L15.06 23H13v-2.06zM3 7V5h2V4a2 2 0 0 1 2-2h6v7l2.5-1.5L18 9V2h1c1.05 0 2 .95 2 2v6L11 20v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2 0h2V5H5zm0 4v2h2v-2zm0 6v2h2v-2z"/></svg>
+
+    </a>
+    Sonri an Sonjo在额尼河畔
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E5%BD%A2%E5%BC%8F%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95%E8%AE%BA/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    形式科学方法论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    形式科学方法论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E9%9B%86%E5%90%88%E8%AE%BA/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    集合论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9B%86%E5%90%88%E8%AE%BA/%E5%88%9D%E7%AD%89%E9%9B%86%E5%90%88%E8%AE%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初等集合论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算理论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/%E8%87%AA%E5%8A%A8%E6%9C%BA%E7%90%86%E8%AE%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动机理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/%E5%8F%AF%E8%AE%A1%E7%AE%97%E6%80%A7%E7%90%86%E8%AE%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可计算性理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E6%80%A7%E7%90%86%E8%AE%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算复杂性理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    经典逻辑
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    经典逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BB%8F%E5%85%B8%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    经典命题逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模态逻辑
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模态逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91/%E5%91%BD%E9%A2%98%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命题模态逻辑基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91/%E5%91%BD%E9%A2%98%E6%A8%A1%E6%80%81%E9%80%BB%E8%BE%91%E8%BF%9B%E9%98%B6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命题模态逻辑进阶
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E7%AD%96%E7%95%A5%E6%8E%A8%E7%90%86/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    策略推理
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    策略推理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AD%96%E7%95%A5%E6%8E%A8%E7%90%86/%E4%BA%A4%E6%9B%BF%E6%97%B6%E6%80%81%E9%80%BB%E8%BE%91.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交替时态逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        真值表
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="真值表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabular-propositional-logictpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附：表格命题逻辑（Tabular Propositional Logic,TPL）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        赋值博弈
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        克雷格插值
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>真值表、赋值博弈与插值</h1>
+
+<h2 id="_1">真值表<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<p><strong>定义2.2.1（真值表）</strong> 任给公式 <span class="arithmatex">\(\varphi\)</span>，设 <span class="arithmatex">\(m:=|\mathrm{Var}(\varphi)|\)</span>、<span class="arithmatex">\(n:=|\mathrm{Sub}(\varphi)|\)</span> ，子公式根据 <em>定义1.8</em> 的一个按顺序排列 <span class="arithmatex">\((\psi_1,\ldots,\psi_n)\)</span> 。</p>
+<p><span class="arithmatex">\(\varphi\)</span> 的真值表 <span class="arithmatex">\(T_\varphi: [n]\times(\{0\}\cup[2^m])\longrightarrow\mathrm{Sub}(\varphi)\cup\mathbb{B}\)</span> ，满足：</p>
+<ul>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\)</span>，<span class="arithmatex">\(T_\varphi(i,0):=\psi_i\)</span>；</p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(i\in[m],\text{ }j\in[2^m]\)</span>，<span class="arithmatex">\(T_\varphi(i,j):=\begin{cases}1,\quad \big\lfloor\frac{j-1}{2^{m-i}}\big\rfloor\text{是偶数}\\0,\quad\text{否则}\end{cases}\)</span>，令赋值<span class="arithmatex">\(v:\mathrm{Var}(\varphi)\longrightarrow\mathbb{B}\)</span> 满足 <span class="arithmatex">\(v_j(\psi_i)=T_\varphi(i,j)\)</span>；</p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\setminus[m],\text{ }j\in[2^m]\)</span>，<span class="arithmatex">\(T_\varphi(i,j):=\hat{v}_j(\psi_i)\)</span>，其中 <span class="arithmatex">\(\hat{v}_j\)</span> 是 <span class="arithmatex">\(v\)</span> 根据 <em>定义2.4</em> 递归定义得到。</p>
+</li>
+</ul>
+<p><strong>命题2.2.2（使用真值表判断重言式、可满足式、矛盾式）</strong> </p>
+<p>任给公式 <span class="arithmatex">\(\varphi\)</span>，设 <span class="arithmatex">\(m:=|\mathrm{Var}(\varphi)|\)</span>、<span class="arithmatex">\(n:=|\mathrm{Sub}(\varphi)|\)</span> ，<span class="arithmatex">\(T_\varphi\)</span> 是 <span class="arithmatex">\(\varphi\)</span> 的真值表：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\varphi\)</span> 是重言式 <span class="arithmatex">\(\iff\)</span> 对于任意 <span class="arithmatex">\(j\in[2^m]\)</span>， <span class="arithmatex">\(T_\varphi(n,j)=1\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\varphi\)</span> 是可满足的 <span class="arithmatex">\(\iff\)</span> 存在 <span class="arithmatex">\(j\in[2^m]\)</span>， <span class="arithmatex">\(T_\varphi(n,j)=1\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\varphi\)</span> 是矛盾式 <span class="arithmatex">\(\iff\)</span> 对于任意 <span class="arithmatex">\(j\in[2^m]\)</span>， <span class="arithmatex">\(T_\varphi(n,j)=0\)</span>.</p>
+</li>
+</ul>
+<p><strong>定义2.2.3（多真值表合并表）</strong> 设有限非空的公式集 <span class="arithmatex">\(\Gamma=\{\varphi_1,\ldots,\varphi_k\}\subseteq\mathcal{L}_0\)</span> 。</p>
+<p>令公共变元集 <span class="arithmatex">\(V:=\bigcup_{i=1}^k\mathrm{Var}(\varphi_i),\ m:=|V|\)</span>. 取 <span class="arithmatex">\(V\)</span> 的一个枚举 <span class="arithmatex">\((p_1,\ldots,p_m)\)</span>。</p>
+<p>令非变元子公式集 <span class="arithmatex">\(W:=\Bigl(\bigcup_{i=1}^k\mathrm{Sub}(\varphi_i)\Bigr)\setminus V，\ r:=|W|\)</span>.</p>
+<p>有限集 <span class="arithmatex">\(W\)</span> 可线性排列为 <span class="arithmatex">\((\chi_1,\ldots,\chi_r)\)</span>，满足：</p>
+<ul>
+<li>
+<p>对每个 <span class="arithmatex">\(i\in[r]\)</span>， <span class="arithmatex">\(\chi_i\in W\)</span> ；</p>
+</li>
+<li>
+<p>对任意<span class="arithmatex">\(\chi\in W\)</span> ，存在唯一的 <span class="arithmatex">\(i\in[r]\)</span> ，使得 <span class="arithmatex">\(\chi=\chi_i\)</span>​；</p>
+</li>
+<li>
+<p>对任意 <span class="arithmatex">\(i,j\in[r]\)</span> ，若 <span class="arithmatex">\(\chi_i\in\mathrm{Sub}^-(\chi_j)\)</span>​ ，则 <span class="arithmatex">\(i&lt;j\)</span>.</p>
+</li>
+</ul>
+<p>令 <span class="arithmatex">\(n:=m+r\)</span>，合并表行序列 <span class="arithmatex">\((\psi_1,\ldots,\psi_n):=(p_1,\ldots,p_m,\chi_1,\ldots,\chi_r)\)</span></p>
+<p>对每个 <span class="arithmatex">\(s\in[k]\)</span>，设<span class="arithmatex">\(m_s:=|\mathrm{Var}(\varphi_s)|,\  n_s:=|\mathrm{Sub}(\varphi_s)|\)</span>. 并按 <em>定义1.8</em> 把 <span class="arithmatex">\(\varphi_s\)</span> 的子公式排列为 <span class="arithmatex">\((\psi_{s,1},\ldots,\psi_{s,n_s})\)</span>. <span class="arithmatex">\(T_{\varphi_s}\)</span> 是 <span class="arithmatex">\(\varphi_s\)</span> 的真值表。对于子序列 <span class="arithmatex">\((\psi_{s,1},\ldots,\psi_{s,m_s})\)</span>，由 <em>定义1.8</em> 知它是 <span class="arithmatex">\(\mathrm{Var}(\varphi_s)\)</span> 的一个枚举。由于<span class="arithmatex">\(\mathrm{Var}(\varphi_s)\in V\)</span> ，因此对每个 <span class="arithmatex">\(t\in[m_s]\)</span>，存在唯一 <span class="arithmatex">\(i\in[m]\)</span> 使得 <span class="arithmatex">\(\psi_{s,t}=\psi_i\)</span>，记 <span class="arithmatex">\(\mathrm{N}(\varphi_{s,t}):=i\)</span>.</p>
+<p><span class="arithmatex">\(\Gamma\)</span> 的真值表合并表 <span class="arithmatex">\(T_\Gamma:[n]\times(\{0\}\cup[2^m])\longrightarrow V\cup W\cup\mathbb{B}\)</span>，满足：</p>
+<ul>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\)</span>，<span class="arithmatex">\(T_\Gamma(i,0):=\psi_i\)</span>.</p>
+</li>
+<li>
+<p>对 <span class="arithmatex">\(i\in[m]\)</span>，<span class="arithmatex">\(j\in[2^m]\)</span>，<span class="arithmatex">\(T_\Gamma(i,j):=\begin{cases}1,\quad \big\lfloor\frac{j-1}{2^{m-i}}\big\rfloor\text{是偶数},\\ 0,\quad  \text{否则}.\end{cases}\)</span></p>
+</li>
+</ul>
+<p>令赋值<span class="arithmatex">\(v:\mathrm{Var}(\varphi)\longrightarrow\mathbb{B}\)</span> 满足 <span class="arithmatex">\(v_j(p_i)=T_\Gamma(i,j)\)</span>。</p>
+<ul>
+<li>
+<p>对 <span class="arithmatex">\(i\in[n]\setminus[m]\)</span>，即 <span class="arithmatex">\(\psi_i\in W\)</span>，任取 <span class="arithmatex">\(\varphi_s\in\Gamma\)</span> 使得 <span class="arithmatex">\(\psi_i\in\mathrm{Sub}(\varphi_s)\)</span>. 取 <span class="arithmatex">\(i_s\in[n_s]\)</span> 满足 <span class="arithmatex">\(T_{\varphi_s}(i_s,0)=\psi_i\)</span>. 对每个 <span class="arithmatex">\(j\in[2^m]\)</span>，存在唯一的 <span class="arithmatex">\(j_s\in[2^{m_s}]\)</span>，使得：</p>
+<div class="arithmatex">\[
+  (T_{\varphi_s}(1,j_s),\ldots,T_{\varphi_s}(m_s,j_s))=(T_\Gamma(\mathrm{N}(\varphi_{s,1}),j),\ldots,T_\Gamma(\mathrm{N}(\varphi_{s,m_s}),j))
+\]</div>
+</li>
+</ul>
+<p>定义 <span class="arithmatex">\(T_\Gamma(i,j):=T_{\varphi_s}(i_s,j_s)\)</span>.</p>
+<p><strong>命题2.2.4（使用真值表判断语义后承）</strong> </p>
+<p><strong>命题2.2.5（使用真值表判断语义等值）</strong> </p>
+<h3 id="tabular-propositional-logictpl">附：表格命题逻辑（Tabular Propositional Logic,TPL）<a class="headerlink" href="#tabular-propositional-logictpl" title="Permanent link">⚓︎</a></h3>
+<blockquote>
+<p>参见 HAZE T G. <a href="https://philpapers.org/archive/HAZTTT.pdf#1#4#1">The truth table formulation of propositional logic</a>[J]. Teorema: International Journal of Philosophy, 2023, 42(1): 123-147.</p>
+</blockquote>
+<p><strong>定义2.2.6（TPL 的符号）</strong> 表格命题逻辑 TPL 的符号 <span class="arithmatex">\(\Sigma=\Phi\cup\{T,F,\bullet\}\)</span>：</p>
+<ul>
+<li>原子：<span class="arithmatex">\(a,b,\ldots,z,a_1,b_1,\ldots\)</span>，<span class="arithmatex">\(\Phi\)</span> 是所有原子构成的集合；</li>
+<li>值符号：<span class="arithmatex">\(\mathrm T,\mathrm F\)</span>；</li>
+<li>占位符：<span class="arithmatex">\(\bullet\)</span>.</li>
+</ul>
+<p><strong>定义2.2.7（TPL 合式公式）</strong> 设 <span class="arithmatex">\(n\ge1\)</span>，<span class="arithmatex">\(p_1,\ldots,p_n\in\Phi\)</span> 且对于任意 <span class="arithmatex">\(i,j\in[n],p_i\not=p_j\)</span>。一个 TPL 合式公式是 <span class="arithmatex">\((2^n+1)\times(n+1)\)</span> 的二维阵列 <span class="arithmatex">\(\alpha\)</span>，满足：</p>
+<ol>
+<li>顶行为 <span class="arithmatex">\(p_1\ \ p_2\ \ \cdots\ \ p_n\ \ \bullet\)</span>；</li>
+<li>对每个 <span class="arithmatex">\(i\in[n]\)</span>，第 <span class="arithmatex">\(i\)</span> 列第 <span class="arithmatex">\(1\)</span> 行为 <span class="arithmatex">\(p_i\)</span>，第 <span class="arithmatex">\(i\)</span> 列第 <span class="arithmatex">\(2\)</span> 至 <span class="arithmatex">\(2^n+1\)</span> 行依次为由 <span class="arithmatex">\(2^i\)</span> 段交替的 <span class="arithmatex">\(\mathrm T,\mathrm F\)</span> 序列，每段长度为 <span class="arithmatex">\(2^n/2^i\)</span>；</li>
+<li>最右列第 <span class="arithmatex">\(1\)</span> 个元素为 <span class="arithmatex">\(\bullet\)</span>，第 <span class="arithmatex">\(2\)</span> 至 <span class="arithmatex">\(2^n+1\)</span> 行为 <span class="arithmatex">\(\mathrm T\)</span> 或 <span class="arithmatex">\(\mathrm F\)</span>。</li>
+</ol>
+<p>称第 <span class="arithmatex">\(1\)</span> 行为 <span class="arithmatex">\(\alpha\)</span> 的顶行，并记 <span class="arithmatex">\(\alpha\)</span> 中原子集为 <span class="arithmatex">\(\mathrm{Var}(\alpha)\)</span>。</p>
+<p><strong>例2.2.8</strong> 与 <span class="arithmatex">\(\mathcal{L}_0\)</span> 中公式 <span class="arithmatex">\((p\to q)\)</span> 对应的 TPL 合式公式为：</p>
+<div class="arithmatex">\[
+\begin{array}{ccc}
+p &amp; q &amp; \bullet\\\hline
+\mathrm T &amp; \mathrm T &amp; \mathrm T\\
+\mathrm T &amp; \mathrm F &amp; \mathrm F\\
+\mathrm F &amp; \mathrm T &amp; \mathrm T\\
+\mathrm F &amp; \mathrm F &amp; \mathrm T
+\end{array}
+\]</div>
+<p><strong>定义2.2.9（否定）</strong> 设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式。将 <span class="arithmatex">\(\alpha\)</span> 最右列第 <span class="arithmatex">\(2\)</span> 至 <span class="arithmatex">\(2^n+1\)</span> 行中所有 <span class="arithmatex">\(\mathrm T\)</span> 改为 <span class="arithmatex">\(\mathrm F\)</span>、所有 <span class="arithmatex">\(\mathrm F\)</span> 改为 <span class="arithmatex">\(\mathrm T\)</span>，所得合式公式称为 <span class="arithmatex">\(\alpha\)</span> 的否定。</p>
+<p><strong>定义2.2.10（语义）</strong> TPL 的模型为赋值 <span class="arithmatex">\(v:\Phi\longrightarrow\mathbb{B}\)</span>.</p>
+<p>设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，顶行原子为 <span class="arithmatex">\(p_1,\ldots,p_n\)</span>。若 <span class="arithmatex">\(\alpha\)</span> 的某赋值行 <span class="arithmatex">\(R\)</span> 满足：对每个 <span class="arithmatex">\(i\in[n]\)</span>，<span class="arithmatex">\(R\)</span> 在 <span class="arithmatex">\(p_i\)</span> 下为 <span class="arithmatex">\(\mathrm T\)</span> 当且仅当 <span class="arithmatex">\(v(p_i)=1\)</span>，则称 <span class="arithmatex">\(R\)</span> 为 <span class="arithmatex">\(\alpha\)</span> 的 <span class="arithmatex">\(v\)</span>-对应行。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(v\models\alpha:\iff \alpha\text{ 的 }v\text{-对应行的最右元素为 }\mathrm{T}.\)</span></p>
+</li>
+<li>
+<p>重言式、可满足式、矛盾式、偶然式、公式集可满足性与语义后承，与<strong>定义2.1.6</strong>、<strong>定义2.1.7</strong>、<strong>定义2.1.10</strong> 一致（参见 <a href="%E7%9C%9F%E5%80%BC%E8%AF%AD%E4%B9%89.html#真值函数与语义后承">真值函数与语义后承</a>）。</p>
+</li>
+</ul>
+<p><strong>命题2.2.11（单公式自判定）</strong> 设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，<span class="arithmatex">\(C=(c_1,\ldots,c_{2^n})\)</span> 为 <span class="arithmatex">\(\alpha\)</span> 最右列第 <span class="arithmatex">\(2\)</span> 至第 <span class="arithmatex">\(2^n+1\)</span> 个元素按行从上到下排成的序列。则：</p>
+<ol>
+<li><span class="arithmatex">\(\alpha\)</span> 是重言式 <span class="arithmatex">\(\iff\)</span> 对于任意 <span class="arithmatex">\(c_i\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm T\)</span>；</li>
+<li><span class="arithmatex">\(\alpha\)</span> 是可满足式 <span class="arithmatex">\(\iff\)</span> 存在 <span class="arithmatex">\(c_i\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm T\)</span>；</li>
+<li><span class="arithmatex">\(\alpha\)</span> 是矛盾式 <span class="arithmatex">\(\iff\)</span> 对于任意 <span class="arithmatex">\(c_i\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm F\)</span>；</li>
+<li><span class="arithmatex">\(\alpha\)</span> 是偶然式 <span class="arithmatex">\(\iff\)</span> 存在 <span class="arithmatex">\(c_i,c_j\in C\)</span>，<span class="arithmatex">\(c_i=\mathrm T\)</span> 且 <span class="arithmatex">\(c_j=\mathrm F\)</span>.</li>
+</ol>
+<p><strong>定义2.2.12（顶行相同）</strong> 称一组 TPL 合式公式顶行相同，若它们的顶行原子相同、排列次序相同且占位符位置相同。</p>
+<p><strong>命题2.2.13（顶行相同的联合判定）</strong> 设 <span class="arithmatex">\(\Gamma=\{\alpha_1,\ldots,\alpha_k\}\)</span> 是有限个顶行相同的 TPL 公式，<span class="arithmatex">\(C_i\)</span> 为 <span class="arithmatex">\(\alpha_i\)</span> 的右列序列，其第 <span class="arithmatex">\(j\)</span> 个元素记作 <span class="arithmatex">\(C_i(j)\)</span>。则 <span class="arithmatex">\(\Gamma\)</span> 联合可满足，当且仅当存在 <span class="arithmatex">\(j\in[2^n]\)</span>，使得对所有 <span class="arithmatex">\(i\in[k]\)</span> 都有 <span class="arithmatex">\(C_i(j)=\mathrm T\)</span>。</p>
+<p><strong>定义2.2.14（冗余原子）</strong> 约定所涉 TPL 合式公式的顶行按字母序排列。设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，<span class="arithmatex">\(q\in\mathrm{Var}(\alpha)\)</span>。称 <span class="arithmatex">\(q\)</span> 在 <span class="arithmatex">\(\alpha\)</span> 中冗余，若对 <span class="arithmatex">\(\alpha\)</span> 的任意两个赋值行 <span class="arithmatex">\(R,R'\)</span>，只要 <span class="arithmatex">\(R\)</span> 与 <span class="arithmatex">\(R'\)</span> 在除 <span class="arithmatex">\(q\)</span> 外的每个顶行原子下值符号相同，就有 <span class="arithmatex">\(R\)</span> 与 <span class="arithmatex">\(R'\)</span> 的最右元素相同。</p>
+<p><strong>定义2.2.15（扩展）</strong> 设 <span class="arithmatex">\(\alpha\)</span> 是 TPL 合式公式，顶行按字母序排列。设 <span class="arithmatex">\(V\)</span> 是有限原子集，<span class="arithmatex">\(V\supseteq\mathrm{Var}(\alpha)\)</span>，按字母序枚举为 <span class="arithmatex">\(q_1,\ldots,q_m\)</span>。<span class="arithmatex">\(\alpha\)</span> 关于 <span class="arithmatex">\(V\)</span> 的扩展 <span class="arithmatex">\(\alpha^V\)</span> 是如下 TPL 合式公式：</p>
+<ol>
+<li>顶行为 <span class="arithmatex">\(q_1\ \ \cdots\ \ q_m\ \ \bullet\)</span>；</li>
+<li>对 <span class="arithmatex">\(V\)</span> 的每个赋值行 <span class="arithmatex">\(S\)</span>，令 <span class="arithmatex">\(R\)</span> 为 <span class="arithmatex">\(S\)</span> 限制到 <span class="arithmatex">\(\mathrm{Var}(\alpha)\)</span> 后得到的 <span class="arithmatex">\(\alpha\)</span> 的赋值行；<span class="arithmatex">\(\alpha^V\)</span> 在 <span class="arithmatex">\(S\)</span> 的右列元素定义为 <span class="arithmatex">\(\alpha\)</span> 在 <span class="arithmatex">\(R\)</span> 的右列元素。</li>
+</ol>
+<p><strong>命题2.2.16（扩展保持联合可满足性）</strong> 设 <span class="arithmatex">\(\Gamma=\{\alpha_1,\ldots,\alpha_k\}\)</span> 是有限 TPL 公式组，<span class="arithmatex">\(V=\bigcup_{i=1}^k\mathrm{Var}(\alpha_i)\)</span>，<span class="arithmatex">\(\Gamma^V=\{\alpha_1^V,\ldots,\alpha_k^V\}\)</span>。则 <span class="arithmatex">\(\Gamma\text{ 联合可满足}\iff\Gamma^V\text{ 联合可满足}.\)</span></p>
+<h2 id="_2">赋值博弈<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p><strong>定义2.3.1（命题逻辑赋值博弈）</strong> 给定赋值 <span class="arithmatex">\(v:\Phi\to\mathbb B\)</span>，和公式<span class="arithmatex">\(\varphi\in\mathcal{L}_0\)</span>. 赋值博弈 <span class="arithmatex">\(G(v,\varphi)\)</span> 的两名玩家 <span class="arithmatex">\(\{\mathbf P,\mathbf O\}\)</span> 和初始角色 <span class="arithmatex">\(\{\text{证实者}，\text{证伪者}\}\)</span> 约定如下：</p>
+<ul>
+<li>玩家 <span class="arithmatex">\(\mathbf P\)</span> 的初始角色为“证实者”；</li>
+<li>玩家 <span class="arithmatex">\(\mathbf O\)</span> 的初始角色为“证伪者”。</li>
+</ul>
+<p>博弈的状态是一个尚未被消去的公式。初始状态为 <span class="arithmatex">\(\varphi\)</span>，轮到 <span class="arithmatex">\(\mathbf P\)</span> 行动。规则如下：</p>
+<ol>
+<li>若当前公式是原子 <span class="arithmatex">\(p\)</span>，博弈终止：若 <span class="arithmatex">\(v(p)=1\)</span>，则当前角色为“支持”的一方获胜；若 <span class="arithmatex">\(v(p)=0\)</span>，则当前角色为“反对”的一方获胜。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\lor\chi\)</span>，由当前角色为“支持”的一方选择 <span class="arithmatex">\(\psi\)</span> 或 <span class="arithmatex">\(\chi\)</span> 继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\land\chi\)</span>，由当前角色为“反对”的一方选择 <span class="arithmatex">\(\psi\)</span> 或 <span class="arithmatex">\(\chi\)</span> 继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\neg\psi\)</span>，则两名玩家交换角色，从 <span class="arithmatex">\(\psi\)</span> 继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\to\chi\)</span>，将其视为 <span class="arithmatex">\(\neg\psi\lor\chi\)</span> 并按上述规则继续。</li>
+<li>若当前公式是 <span class="arithmatex">\(\psi\leftrightarrow\chi\)</span>，将其视为 <span class="arithmatex">\((\psi\land\chi)\lor(\neg\psi\land\neg\chi)\)</span> 并按上述规则继续。</li>
+</ol>
+<p><strong>定义2.3.2（获胜策略与博弈论真值）</strong> 玩家 <span class="arithmatex">\(\mathbf P\)</span> 在 <span class="arithmatex">\(G(v,\varphi)\)</span> 中的策略，是一个从“轮到 <span class="arithmatex">\(\mathbf P\)</span> 行动的状态”到合法行动的函数。称策略 <span class="arithmatex">\(\sigma\)</span> 是获胜策略，当且仅当 <span class="arithmatex">\(\mathbf P\)</span> 按照 <span class="arithmatex">\(\sigma\)</span> 行动时，对于 <span class="arithmatex">\(\mathbf O\)</span> 的任何行动，最终到达的原子状态都使 <span class="arithmatex">\(\mathbf P\)</span> 获胜。类似地定义 <span class="arithmatex">\(\mathbf O\)</span> 的获胜策略。</p>
+<div class="arithmatex">\[
+v\models_{\mathrm G}\varphi:\iff \mathbf P\text{ 在 }G(v,\varphi)\text{ 中有获胜策略}.
+\]</div>
+<h2 id="_3">克雷格插值<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+      
+    
+  </body>
+</html>
